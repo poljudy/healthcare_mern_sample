@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // import { List, ListItem } from "../List";
 // import Axios from "axios";
 import useAxios from "axios-hooks";
+import Axios from "axios";
 // import Fade from '@material-ui/core/Fade';
 // import Cookies from 'js-cookie';
 import {
@@ -142,6 +143,13 @@ const Forum = props =>{
 useEffect(() => {
   randomtext()
 }, [])
+
+function deletefunc(id){
+  console.log(id)
+  Axios.delete("/api/resources/"+ id)
+  .then(res => randomtext())
+.catch(err => console.log(err))
+};
 // const [mytitle, setmytitle] = useState("");
 // const [mycatagory, setmycatagory] = useState("");
 // const [myheading, setmyheading] = useState("");
@@ -267,6 +275,9 @@ className={classes.border}
   subtitle={dataR.subtitle}
    body1={dataR.body1}
    body2={dataR.body2}
+   id={dataR._id}
+  //  editfunc={}
+  //  deletefunc={this.deletefunc(id)}
      />
      </Paper>
 </Grid>

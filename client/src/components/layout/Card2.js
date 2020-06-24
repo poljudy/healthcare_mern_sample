@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 // import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -14,9 +14,10 @@ import Typography from '@material-ui/core/Typography';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 // import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Button } from '@material-ui/core';
 // import MoreVertIcon from '@material-ui/icons/MoreVert';
 // import Divider from '@material-ui/core/Divider'
-
+import AuthContext from '../../context/auth/authContext';
 const useStyles = makeStyles((theme) => ({
   root: {
     // maxWidth: ,
@@ -83,6 +84,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function StaffCard(props) {
   const classes = useStyles();
+  const authContext = useContext(AuthContext);
+  const { isAuthenticated, logout, user } = authContext;
   let i = props.id
   // const [expanded, setExpanded] = React.useState(false);
   const [expandedId, setExpandedId] = React.useState(-1);
@@ -175,6 +178,12 @@ export default function StaffCard(props) {
           // aria-label="show more"
           
         >
+        {/* { user && props.editfunc && user.role === "admin" &&
+        <Button onClick={props.editfunc}>Edit</Button>
+      } */}
+      {/* { user && props.deletefunc && user.role === "admin" && */}
+        {/* <Button onClick={this.props.deletefunc(props.id)}>Delete</Button> */}
+      {/* } */}
           <ExpandMoreIcon />
           <Typography variant="body2" color="textSecondary" component="p">
          View Info

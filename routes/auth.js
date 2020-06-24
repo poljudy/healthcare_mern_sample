@@ -56,7 +56,7 @@ router.post(
           id: user.id,
         },
       };
-
+// add name and role above?
       jwt.sign(
         payload,
         // config.get('jwtSecret'),

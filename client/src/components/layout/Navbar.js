@@ -499,7 +499,7 @@ const menuId = "primary-search-account-menu";
               {/* <Link to={"/contact"}>
               Contact Us
               </Link> */}
-              { user && "Welcome "+user.name }
+              { user && "Welcome "+ user.name }
     </Typography>
               
               
