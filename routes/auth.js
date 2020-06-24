@@ -2,18 +2,18 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const config = require('config');
+// const config = require('config');
 const auth = require('../middleware/auth');
 const {check, validationResult} = require('express-validator');
 
-const User = require('../models/User');
-
+// const User = require('../models/User');
+const db = require('../models');
 // @route     GET api/auth
 // @desc      Get logged in user
 // @access    Private
 router.get('/', auth, async (req, res) => {
   try {
-    const user = await User.findById(req.user.id).select('-password');
+    const user = await db.User.findById(req.user.id).select('-password');
     res.json(user);
   } catch (err) {
     console.error(err.message);
@@ -39,7 +39,7 @@ router.post(
     const {email, password} = req.body;
 
     try {
-      let user = await User.findOne({email});
+      let user = await db.User.findOne({email});
 
       if (!user) {
         return res.status(400).json({msg: 'Invalid Credentials'});
@@ -59,7 +59,8 @@ router.post(
 
       jwt.sign(
         payload,
-        config.get('jwtSecret'),
+        // config.get('jwtSecret'),
+        process.env.jwtSecret,
         {
           expiresIn: 360000,
         },

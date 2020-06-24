@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const config = require('config');
+// const config = require('config');
 // const db = config.get('mongoURI');
 const db = process.env.MONGODB_URI || "mongodb://localhost:27017/healthcare";
 const connectDB = async () => {
