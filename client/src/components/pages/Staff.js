@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '../layout/Card2'
-
+const mWeissman = '../../Images/mWeissman.jpg'
 const StaffList = [
     {
         name: "Michael S. Weissman",
@@ -13,7 +13,7 @@ const StaffList = [
         education: 'Princeton University, 1970. University of Massachusetts, 1974, PhD Past President, Tidewater Academy of Clinical Psychologists Past President, Virginia Academy of Clinical Psychologists Listed in National Register of  Health Care Providers in Psychology.',
         other: 'Past President, Tidewater Academy of Clinical Psychologists Past President, Virginia Academy of Clinical Psychologists Listed in National Register of  Health Care Providers in Psychology. Assistant Professor of Behavioral Science, adjunct faculty, Eastern Virginia Medical School',
         hours: 'Churchland and Norfolk offices.',
-        img: 'http://www.counselinghr.com/wp-content/uploads/2020/03/Michael-2020-cropped.jpg'   
+        img: mWeissman   
     },
     {
         name: "Barbara B. Forbes",
@@ -145,6 +145,7 @@ className={classes.cardtheme}
     body3={staff.other}
     footer={staff.hours}
     id={staff._id}
+   axiosL={"staff"}
 />
 </Grid>
       ))}

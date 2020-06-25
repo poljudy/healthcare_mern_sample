@@ -19,7 +19,8 @@ const UserSchema = mongoose.Schema({
     default: Date.now
   },
   role: {
-    type: String
+    type: String,
+    default: 'patient'
   }
 });
 

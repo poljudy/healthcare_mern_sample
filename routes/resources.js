@@ -4,6 +4,8 @@ const resourceController = require("../controllers/resourcesController");
 // const jwtVerify = require("../../config/jwt");
 
 router.route("/all").get(resourceController.getAll);
+router.route("/").post(resourceController.create)
+router.route("/update/:id").put(resourceController.update)
 router.route("/catagory/:catagory").get(resourceController.getbycatagory);
 router.route("/catagory/:catagory").put(resourceController.editbycatagory);
 router.route("/catagory/:catagory").post(resourceController.createbycatagory);

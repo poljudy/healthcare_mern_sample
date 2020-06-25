@@ -9,6 +9,7 @@ const resourcesSchema = new Schema({
   body2: String,
   rating: Number,
   link: String,
+  author: String,
   date: { type: Date, default: Date.now }
 });
 

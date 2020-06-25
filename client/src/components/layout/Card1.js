@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 // import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import theme from '../theme/Theme';
+import { Link } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
@@ -65,18 +66,33 @@ const Card1 = props => {
         <Typography variant="subtitle1" component="h2" className={classes.title}>
         {props.title}
         </Typography>
+        {!props.link3 ? null : (
+<Link href={props.link3} target="_blank" rel="noopener">
         <Typography variant="subtitle2" component="p" className={classes.theming}>
           {props.main}
           <br />
           {props.main2}
           </Typography>
+          </Link>
+          )}
+          {props.link3 ? null : (
+            <Typography variant="subtitle2" component="p" className={classes.theming}>
+          {props.main}
           <br />
+          {props.main2}
+          </Typography>
+          )}
+          <br />
+          <Link href={"tel:" + props.link1} target="_blank" rel="noopener">
           <Typography className={classes.footer} variant="body2" color="textSecondary" gutterBottom>
           {props.link1}
         </Typography>
+        </Link>
+        <Link href={"mailto:" + + props.link2} target="_blank" rel="noopener">
         <Typography className={classes.footer} variant="body2" color="textSecondary" gutterBottom>
           {props.link2}
         </Typography>
+        </Link>
         {/* <Typography className={classes.pos} color="textSecondary">
           {props.link2}
         </Typography> */}

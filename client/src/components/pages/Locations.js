@@ -8,7 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import { lightGreen } from "@material-ui/core/colors";
 import Typography from '@material-ui/core/Typography';
-
+import Divider from '@material-ui/core/Divider';
 
 const MyLocations = [
         {
@@ -20,6 +20,7 @@ const MyLocations = [
        main2: "Chesapeake, VA 23321",
        link1: "(757) 483-3404 (for all offices)",
        link2: "cpc3210@yahoo.com",
+       googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
        Images:[
         'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
         'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
@@ -37,6 +38,7 @@ const MyLocations = [
        main2: "Chesapeake, VA 23321",
        link1: "(757) 483-3404 (for all offices)",
        link2: "cpc3210@yahoo.com",
+       googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
        Images:[
         'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
         'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
@@ -54,6 +56,7 @@ const MyLocations = [
    main2: "Chesapeake, VA 23321",
    link1: "(757) 483-3404 (for all offices)",
    link2: "cpc3210@yahoo.com",
+   googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
    Images:[
     'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
     'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
@@ -78,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
       textAlign: 'center',
       color: theme.palette.text.secondary,
-      height: '100%',
+      // height: '100%',
       background: 'white',
       margin: 30,
       [theme.breakpoints.down('md')]: {
@@ -126,17 +129,18 @@ const Locations = () => {
 <Typography variant="h1" component="h2" className={classes.h1theme}>
   Find Us at One of Our Three Locations:
 </Typography>
-    {MyLocations.map(loc =>(
-      <div className={classes.root}>
-
-      <Grid container spacing={3} className={classes.cardtheme}  
-  // direction="row"
-  // justify="center"
+      <Grid container className={classes.cardtheme}
+  direction="row"
+  justify="center"
   alignItems="stretch"
 >
+    {MyLocations.map(loc =>(
+<Grid item direction={"column"} md={4} s={12} className={classes.itemtheme}>
+      <div className={classes.root}>
 
-        <Grid item xs={12} md={4} className={classes.itemtheme}>
+        {/* <Grid container xs={12} md={6} className={classes.itemtheme} direction={"column"}> */}
           <Paper className={classes.paper} elevation={24}>
+          {/* <Grid item xs={12} md={4} className={classes.itemtheme} direction={"column"}></Grid> */}
           <Card 
           className={classes.cardtheme}
          title={loc.text}
@@ -144,8 +148,10 @@ const Locations = () => {
          main2= {loc.main2}
          link1={loc.link1}
          link2={loc.link2}
-          /></Paper>
-        </Grid>
+         link3={loc.googlemaps}
+          />
+          {/* </Paper> */}
+        {/* </Grid> */}
         {/* <Grid item xs={12} md={4} className={classes.itemtheme}>
           <Paper className={classes.paper} elevation={24}>
           <Maps lat={loc.lat} lng={loc.lng} text={loc.text}/>
@@ -153,19 +159,22 @@ const Locations = () => {
         </Grid> */}
 
 
-        <Grid item xs={12} md={4} className={classes.itemtheme}>
-          <Paper className={classes.paper} elevation={24}><Carousel
+        {/* <Grid item xs={12} md={4} className={classes.itemtheme}> */}
+          {/* <Paper className={classes.paper} elevation={24}> */}
+          <Carousel
          MyLocation={loc}
 
            /></Paper>
-        </Grid>
+        {/* </Grid> */}
 
-      </Grid>
     {/* add white line here */}
       {/* <br />
       <br /> */}
+    <Divider  flexItem={true} variant={"fullWidth"} light={true} orientation={"vertical"} />
     </div>
+    </Grid>
     ))}
+      </Grid>
      </ >
   );
 };

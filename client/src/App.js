@@ -62,6 +62,7 @@ const App = () => {
                       <div className={classes.bg}>
                         <Alerts />
                         <Switch className={classes.container}>
+                        
                           <PrivateRoute exact path="/home" component={AllTabs} />
                           <Route exact path="/about" component={About} />
                           <Route exact path="/register" component={Register} />

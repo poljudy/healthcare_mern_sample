@@ -36,7 +36,7 @@ router.post(
       return res.status(400).json({errors: errors.array()});
     }
 
-    const {email, password} = req.body;
+    const {email, password, role} = req.body;
 
     try {
       let user = await db.User.findOne({email});
@@ -54,6 +54,7 @@ router.post(
       const payload = {
         user: {
           id: user.id,
+          role: user.role
         },
       };
 // add name and role above?
