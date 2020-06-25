@@ -124,7 +124,7 @@ const Card2 = (props) => {
   const authContext = useContext(AuthContext);
   const { isAuthenticated, logout, user } = authContext;
 
-
+const [myID, setMyID] = React.useState(null)
   const [open2, setOpen2] = React.useState(false);
   // const handleOpen2 = () => {
   //   setOpen2(true);
@@ -142,8 +142,9 @@ const Card2 = (props) => {
   async function handleClose2() {
     setOpen2(false);
   }
-  async function openModalUpdate() {
+  async function openModalUpdate(myid) {
     console.log("clicked modal")
+setMyID(myid)
     handleOpen2()
   }
   let i = props.id
@@ -168,13 +169,14 @@ const Card2 = (props) => {
 const [myheadingU, setmyheadingU] = useState("");
 const [mycatagoryU, setmycatagoryU] = useState("");
 const [mysubtitleU, setmysubtitleU] = useState("");
-// const [myimg, setmyimg] = useState("https://cdn.pixabay.com/photo/2017/04/09/16/40/batman-2216148_1280.jpg");
 // const [mylink, setmylink] = useState("");
 const [mybody1U, setmybody1U] = useState("");
 const [mybody2U, setmybody2U] = useState("");
 const [myratingU, setmyratingU] = useState("");
-const [myfootergU, setmyfooterU] = useState("");
+
+const [myfooterU, setmyfooterU] = useState("");
 const [mybody3U, setmybody3U] = useState("");
+const [myimg, setmyimg] = useState("");
 
   function deletefunc(myid){
 // event.preventDefault()
@@ -186,10 +188,10 @@ const [mybody3U, setmybody3U] = useState("");
   };
 
 
-  async function updateFunc(myid){
+  async function updateFunc(){
     if(props.axiosL === 'resources'){
-    console.log(myid)
-    Axios.put("/api/"+props.axiosL+"/update/"+ myid, {
+    console.log(myID)
+    Axios.put("/api/"+props.axiosL+"/update/"+ myID, {
        // author: user.id,
     heading: myheadingU,
     catagory: mycatagoryU,
@@ -205,6 +207,22 @@ const [mybody3U, setmybody3U] = useState("");
   }
   else if(props.axiosL === 'staff'){
 // add axios call and properties
+Axios.put("/api/"+props.axiosL+"/update/"+ myID, {
+  // author: user.id,
+name: myheadingU,
+// catagory: mycatagoryU,
+subtitle: mysubtitleU,
+body1: mybody1U,
+body2: mybody2U,
+other: mybody3U,
+hours: myfooterU
+// rating: myratingU,
+// link: mylink
+})
+.then(res => console.log(res))
+.then(alert("Updated Resource"))
+.catch(err => alert(err));
+
   }else{
     console.log("did not hit any api routes")
   }
@@ -290,10 +308,10 @@ const [mybody3U, setmybody3U] = useState("");
         </IconButton> */}
 {/* updatefunc(props.uid) called in modal */}
         { user && user.role == "admin" &&
-        <>
+        <div>
         <Button onClick={()=> deletefunc(props.uid)}>Delete</Button>
-        <Button onClick={()=> openModalUpdate()}>Edit</Button>
-        </>
+        <Button onClick={()=> openModalUpdate(props.uid)}>Edit</Button>
+        </div>
       }
 
         <IconButton
@@ -414,6 +432,7 @@ const [mybody3U, setmybody3U] = useState("");
           onChange={(e)=> setmysubtitleU(e.target.value)}
           // helperText="Add a link"
         />
+        {props.axiosL == "resources" && 
            <TextField
           label="Catagory"
           id="margin-none"
@@ -423,6 +442,19 @@ const [mybody3U, setmybody3U] = useState("");
           onChange={(e)=> setmycatagoryU(e.target.value)}
           helperText="for future search results"
         />
+        }
+        {props.axiosL == "staff" && 
+        <TextField
+          label="img"
+          id="margin-none"
+         
+          className={classes.textField}
+          value={myimg}
+          onChange={(e)=> setmyimg(e.target.value)}
+          helperText="change img url to the format '../../Images/jDoe.png'"
+        />
+        }
+        {props.axiosL == "resources" &&
              <TextField
           label="rating"
           id="margin-none"
@@ -432,6 +464,7 @@ const [mybody3U, setmybody3U] = useState("");
           onChange={(e)=> setmyratingU(e.target.value)}
           helperText="higher the rating will show on top"
         />
+        }
         <TextField
           id="filled-full-width"
           label="Info"
@@ -461,7 +494,49 @@ const [mybody3U, setmybody3U] = useState("");
             shrink: true,
           }}
           variant="filled"
+          // if props.url = staff then show body3 and 
         />
+
+        {/*  */}
+        {props.axiosL == "staff" && 
+                        <TextField
+          id="filled-full-width"
+          label="Secondary Text"
+          style={{ margin: 8 }}
+         
+          value={mybody3U}
+          onChange={(e)=> setmybody3U(e.target.value)}
+          helperText="Other Info"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+          // if props.url = staff then show body3 and 
+        />
+        }
+        {props.axiosL == "staff" && 
+                        <TextField
+          id="filled-full-width"
+          label="Hours/ footer"
+          style={{ margin: 8 }}
+         
+          value={myfooterU}
+          onChange={(e)=> setmyfooterU(e.target.value)}
+          helperText="Hours"
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="filled"
+          // if props.url = staff then show body3 and 
+        />
+        }
+        {/*  */}
+
+
       <Button onClick={updateFunc}>Update</Button>
       <Button onClick={handleClose2}>exit</Button>
       {/* </div>
@@ -548,12 +623,12 @@ const [mybody3U, setmybody3U] = useState("");
          {mybody2U}
         </Typography>
         )}
-        {/* {!props.body3 ? null : (
+        {!props.body3 ? null : (
         <Typography variant="body2" color="textSecondary" component="p">
         <br />
          {props.body3}
         </Typography>
-        )} */}
+        )}
         <br />
         {/* change props */}
         {/* {!props.footer ? null : (

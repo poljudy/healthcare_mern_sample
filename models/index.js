@@ -1,5 +1,6 @@
 module.exports = {
     Resources: require("./resourceModel"),
     User: require("./User"),
-    Contact: require("./Contact")
+    Contact: require("./Contact"),
+    Staff: require("./StaffModel")
   };

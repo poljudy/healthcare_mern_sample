@@ -368,11 +368,18 @@ const menuId = "primary-search-account-menu";
             <ExitToAppIcon />
           </Badge></IconButton><p>Logout</p></MenuItem></Link> 
           :
+          <div>
           <Link to={"/login"}><MenuItem>
                 <IconButton aria-label="show 4 new mails" color="inherit"><Badge// badgeContent={4}
             color="secondary">
             <ExitToAppIcon />
           </Badge></IconButton><p>Log In</p></MenuItem></Link>
+          <Link to={"/register"}><MenuItem>
+                <IconButton aria-label="show 4 new mails" color="inherit"><Badge// badgeContent={4}
+            color="secondary">
+            <ExitToAppIcon />
+          </Badge></IconButton><p>Register</p></MenuItem></Link>
+          </div>
           }
               
       {/* )} */}
@@ -382,21 +389,7 @@ const menuId = "primary-search-account-menu";
             color="secondary">
             <ExitToAppIcon />
           </Badge></IconButton><p>Log In</p></MenuItem></Link> */}
-
-
-
-
-
           {/* { isAuthenticated ? authLinks : guestLinks } */}
-
-
-
-
-
-
-
-
-
 
       {/* )} */}
     </Menu>
@@ -517,6 +510,20 @@ const menuId = "primary-search-account-menu";
               <HomeIcon />
               </Link>
             </IconButton>
+            {/* <br /> */}
+            {/* copy of menu */}
+            <IconButton
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+              
+            >
+              <MenuIcon />
+            </IconButton>
+            {/* copy of menu */}
+
             {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge
             //    badgeContent={4}

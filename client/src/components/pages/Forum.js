@@ -237,7 +237,7 @@ async function addResource () {
  <Typography variant="h1" component="h2" className={classes.h1theme}>
   Loading
 </Typography>
-    </>;
+    </>
   }
   return (
     <>
@@ -263,10 +263,10 @@ Welcome {user.name}
 </Typography>
 {/* only if role== admin show button */}
 {user && user.role == "admin" && 
-<>
+<div>
 <Button onClick={randomtext}>Refresh</Button>
 <Button onClick={openModalAdd}>Add a FAQ</Button>
-</>
+</div>
 }
 {/* {!data ? null : ( */}
   <div> 
@@ -452,7 +452,7 @@ className={classes.border}
           }}
           variant="filled"
         />
-           <Button onClick={addResource}>Save Blog</Button>
+           <Button onClick={addResource}>Save FAQ</Button>
       <Button onClick={handleClose}>exit</Button>
       {/* </div>
       <div> */}
