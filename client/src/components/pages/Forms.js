@@ -33,6 +33,15 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 50,
     }
   },
+  h2theme: {
+    color: theme.palette.secondary.dark,
+    paddingLeft: 40,
+    margin: 15,
+    textAlign: 'center',
+    [theme.breakpoints.down('md')]: {
+      fontSize: 38,
+    }
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -51,6 +60,10 @@ export default function MediaCard() {
       <>
         <Typography variant="h1" component="h2" className={classes.h1theme}>
   Forms
+</Typography>
+
+<Typography variant="h2" component="h2" className={classes.h2theme}>
+  For Hipaa compliency, please click the link below to send us a short message with what forms you need and we will send you the link with the forms via email. 
 </Typography>
       <Grid
   container

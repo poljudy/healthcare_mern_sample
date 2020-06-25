@@ -102,6 +102,8 @@ const useStyles = makeStyles((theme) => ({
     // alignItems: 'center',
     // justifyContent: 'center',
     // backgroundColor: lightGreen[500],
+    overflow: 'scroll',
+    maxWidth: '100%',
     backgroundColor: theme.palette.background.paper,
     // height: '75%',
     // width: '75%',
@@ -143,7 +145,31 @@ const [myID, setMyID] = React.useState(null)
     setOpen2(false);
   }
   async function openModalUpdate(myid) {
-    console.log("clicked modal")
+    if(props.title){
+      setmyheadingU(props.title)
+    }
+    if(props.subtitle){
+      setmysubtitleU(props.subtitle)
+    }
+    if(props.img){
+      setmyimg(props.img)
+    }
+    if(props.body1){
+      setmybody1U(props.body1)
+    }
+    if(props.body2){
+      setmybody2U(props.body2)
+    }
+    if(props.body3){
+      setmybody3U(props.body3)
+    }
+    if(props.footer){
+      setmyfooterU(props.footer)
+    }
+
+
+
+    // console.log("clicked modal")
 setMyID(myid)
     handleOpen2()
   }
@@ -183,7 +209,7 @@ const [myimg, setmyimg] = useState("");
     console.log(myid)
     Axios.delete("/api/"+props.axiosL+"/"+ myid)
     // .then(res => handlebackgroundColor(myid))
-    .then(res => console.log("deleted"))
+    .then(res => alert("deleting"))
   .catch(err => console.log(err))
   };
 
@@ -211,11 +237,12 @@ Axios.put("/api/"+props.axiosL+"/update/"+ myID, {
   // author: user.id,
 name: myheadingU,
 // catagory: mycatagoryU,
-subtitle: mysubtitleU,
-body1: mybody1U,
-body2: mybody2U,
+title: mysubtitleU,
+education: mybody1U,
+specialties: mybody2U,
 other: mybody3U,
-hours: myfooterU
+hours: myfooterU,
+img: myimg
 // rating: myratingU,
 // link: mylink
 })
@@ -415,7 +442,7 @@ hours: myfooterU
       <br /> */}
       <div><h2>edit This Faq</h2></div>
       <TextField
-          label="Heading"
+          label="Heading / Name"
           id="margin-none"
         
           className={classes.textField}
@@ -424,7 +451,7 @@ hours: myfooterU
           helperText="Your Heading"
         />
             <TextField
-          label="Subtitle"
+          label="Subtitle / Doc Title"
           id="margin-none"
          
           className={classes.textField}
@@ -467,9 +494,10 @@ hours: myfooterU
         }
         <TextField
           id="filled-full-width"
-          label="Info"
+          label="Info / Education"
           style={{ margin: 8 }}
-          
+          multiline={true}
+          rows={3}
           value={mybody1U}
           onChange={(e)=> setmybody1U(e.target.value)}
           helperText="Main Text"
@@ -482,13 +510,15 @@ hours: myfooterU
         />
                 <TextField
           id="filled-full-width"
-          label="Secondary Text"
+          label="Secondary Text / specialities"
           style={{ margin: 8 }}
          
           value={mybody2U}
           onChange={(e)=> setmybody2U(e.target.value)}
           helperText="second paragraph"
+          multiline={true}
           fullWidth
+          rows={3}
           margin="normal"
           InputLabelProps={{
             shrink: true,
@@ -503,7 +533,8 @@ hours: myfooterU
           id="filled-full-width"
           label="Secondary Text"
           style={{ margin: 8 }}
-         
+          multiline={true}
+          rows={3}
           value={mybody3U}
           onChange={(e)=> setmybody3U(e.target.value)}
           helperText="Other Info"
@@ -521,7 +552,8 @@ hours: myfooterU
           id="filled-full-width"
           label="Hours/ footer"
           style={{ margin: 8 }}
-         
+          multiline={true}
+          rows={2}
           value={myfooterU}
           onChange={(e)=> setmyfooterU(e.target.value)}
           helperText="Hours"

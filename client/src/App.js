@@ -63,7 +63,7 @@ const App = () => {
                         <Alerts />
                         <Switch className={classes.container}>
                         
-                          <PrivateRoute exact path="/home" component={AllTabs} />
+                          <PrivateRoute exact path="/admin" component={Home} />
                           <Route exact path="/about" component={About} />
                           <Route exact path="/register" component={Register} />
                           <Route exact path="/login" component={Login} />
@@ -74,6 +74,7 @@ const App = () => {
                           <Route exact path="/payment" component={Payment} />
                           <Route exact path="/contact" component={ContactUs} />
                           <Route exact path="/forms" component={Forms} />
+                          <Route exact path="/home" component={AllTabs} />
                           {/* <Route exact path="/checkout" component={Checkout} />
                           <Route exact path="/plans" component={Plans} /> */}
                         </Switch>
