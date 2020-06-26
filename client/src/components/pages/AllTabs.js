@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import Link from '@material-ui/core/Link';
-
+import Dbparagraph from '../layout/Dbparagraph'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -152,6 +152,7 @@ export default function ScrollableTabsButtonAuto() {
         Click this link to make an invoice for your payment
       </Link>
 </Typography>
+<Dbparagraph catagory={"editpayment"}/>
       </TabPanel>
       <TabPanel value={value} index={5}>
       <Forum />
@@ -172,6 +173,7 @@ export default function ScrollableTabsButtonAuto() {
         Click this link to contact us 
       </Link>
 </Typography>
+<Dbparagraph catagory={"editcontact"}/>
       </TabPanel>
     </div>
   );

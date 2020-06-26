@@ -4,7 +4,7 @@ const db = require("../models");
 module.exports = {
 getbycatagory: function(req, res) {
 db.Resources
-.find({ catagory: req.params.catagory}, req.body)
+.findOne({ catagory: req.params.catagory}, req.body)
 .then(dbresult => res.json(dbresult))
 .catch(err => res.status(404).json(err));
 },

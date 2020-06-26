@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
   cardDetails: {
     flex: 1,
-    textAlign: 'center',
+    // textAlign: 'center',
     
   },
   cardMedia: {

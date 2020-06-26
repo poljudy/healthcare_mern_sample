@@ -15,6 +15,8 @@ import {
     // ListItemText,
     // Link
   } from "@material-ui/core";
+  import Dbparagraph from '../layout/Dbparagraph'
+
   import Backdrop from '@material-ui/core/Backdrop';
   import Paper from '@material-ui/core/Paper';
 import AuthContext from '../../context/auth/authContext';
@@ -125,6 +127,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     // backgroundColor: lightGreen[500],
+    overflow: 'scroll',
+    maxWidth: '100%',
     backgroundColor: theme.palette.background.paper,
     height: '75%',
     width: '75%',
@@ -231,6 +235,9 @@ const Staff = props => {
       <Typography variant="h1" component="h2" className={classes.h1theme}>
   Our Therapists
 </Typography>
+
+<Dbparagraph catagory={"editstaff"}/>
+
 {user &&
       <Typography variant="h4" gutterBottom>
 Welcome {user.name}
@@ -343,6 +350,8 @@ className={classes.cardtheme}
           helperText="Main Text"
           fullWidth
           margin="normal"
+          multiline={true}
+          rows={3}
           InputLabelProps={{
             shrink: true,
           }}
@@ -357,6 +366,8 @@ className={classes.cardtheme}
           onChange={(e)=> setmySpecialities(e.target.value)}
           helperText="second paragraph"
           fullWidth
+          multiline={true}
+          rows={3}
           margin="normal"
           InputLabelProps={{
             shrink: true,

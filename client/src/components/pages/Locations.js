@@ -9,10 +9,11 @@ import Grid from '@material-ui/core/Grid';
 // import { lightGreen } from "@material-ui/core/colors";
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import Dbparagraph from '../layout/Dbparagraph'
 
 const MyLocations = [
         {
-        text:"location 1",
+        text:"Churchland/Western Branch Area of Chesapeake",
         lat: 36.86503,
         lng: -76.403973,
         title: "Churchland/Western Branch Area of Chesapeake",
@@ -30,12 +31,12 @@ const MyLocations = [
        ]
     },
     {
-        text:"location 2",
+        text:"Norfolk",
         lat: 36.86503,
         lng: -76.403973,
-        title: "Churchland/Western Branch Area of Chesapeake",
-        main: "3101 American Legion Road, Suite 21B", 
-       main2: "Chesapeake, VA 23321",
+        title: "Norfolk",
+        main: "1709 Colley Ave., Suite 310", 
+       main2: "Norfolk, VA 23517",
        link1: "(757) 483-3404 (for all offices)",
        link2: "cpc3210@yahoo.com",
        googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
@@ -48,12 +49,12 @@ const MyLocations = [
        ]
     },
     {
-    text:"location 3",
+    text:"Greenbrier Area of Chesapeake",
     lat: 36.86503,
     lng: -76.403973,
-    title: "Churchland/Western Branch Area of Chesapeake",
-    main: "3101 American Legion Road, Suite 21B", 
-   main2: "Chesapeake, VA 23321",
+    title: "Greenbrier Area of Chesapeake",
+    main: "6477 College Park Sq.", 
+   main2: "The Atrium, Suite 216; Virginia Beach, VA 23464",
    link1: "(757) 483-3404 (for all offices)",
    link2: "cpc3210@yahoo.com",
    googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
@@ -175,6 +176,7 @@ const Locations = () => {
     </Grid>
     ))}
       </Grid>
+      <Dbparagraph catagory={"editlocal"}/>
      </ >
   );
 };

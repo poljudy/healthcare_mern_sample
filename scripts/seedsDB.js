@@ -18,12 +18,12 @@ const staffSeed = [
 },
 {
     name: "Barbara B. Forbes",
-    title: "MS Licensed Marriage and Family Therapist, Licensed Professional Counselor",
+    title: "MS, LMFT, LPC",
     specialties: 'Depression and anxiety; adult survivors of childhood sexual, physical, and emotional abuse; substance abuse; weight/overeating concerns; overspending behaviors; relationship “addictions,” (codependency). Helps couples understand how their individual histories impact the marital relationship. Provides counseling and support for couples considering separation and/or divorce. Work-related concerns, stress management, women’s issues, as well as issues related to loss and grief. From a military family herself, she provides mental health services to members of the military and their families. Provider with Military One Source, Coast Guard EAP, as well as most other insurances and EAPs.',
     education: 'Old Dominion University, MS, Psychology, 1976.',
     other: ' Works with: Adults, Couples, Families, Groups. In private practice at Churchland Psychological Center, Churchland office, since 1989.',
     hours: 'Churchland office',
-    img: '../../Images/cpclogo2.png',
+    img: '../../Images/bForbes.jpg',
     date: new Date(Date.now())
 },
 {
@@ -32,7 +32,7 @@ const staffSeed = [
     specialties: 'Individual Psychotherapy with Adults, Couples and Marital Therapy, Family Therapy, Psychological Testing',
     education: 'Oberlin College, BA (1990)',
     other: 'Virginia Consortium for Professional Psychology, PsyD (1995)',
-    img: '../../Images/jAlperin.jpg',
+    img: '../../Images/jAlperin2.jpg',
     date: new Date(Date.now())
   },
 {
@@ -42,7 +42,7 @@ const staffSeed = [
     education: 'Accepts most insurances and employee assistance programs.',
     other: 'Churchland, Mon., Tue., 8 AM – 7 PM',
     hours: 'Great Bridge, Wed., 8 AM – 6 PM; Thu., 8 AM – 7 PM',
-    img: '../../Images/cpclogo2.png',
+    img: '../../Images/tScott.png',
     date: new Date(Date.now())
   },
 {
@@ -53,7 +53,7 @@ const staffSeed = [
     other: 'Churchland Office, Tue., Thu., 9 AM – 5 PM.',
     hours: 'Norfolk Office, Mon., Wed. 8 AM – 1 PM.',
     date: new Date(Date.now()),
-    img: '../../Images/cpclogo2.png'
+    img: '../../Images/sLitt2.jpg'
   },
 {
     name: "Catherine D. Smithson",
@@ -63,7 +63,7 @@ const staffSeed = [
     other: 'Accepts most insurances and employee assistance programs.', 
     hours: 'Churchland, Thursdays and Fridays.',
     date: new Date(Date.now()),
-    img: '../../Images/cpclogo2.png'
+    img: '../../Images/cSmithson.png'
   },
 {
     name: "Susan M. Asprey",
@@ -74,8 +74,105 @@ const staffSeed = [
     hours: 'Churchland; flexible hours per client need.',
     img: '../../Images/sAsprey.jpg',
     date: new Date(Date.now())
+  },
+  {
+    name: "Frank Gripka",
+    title: "PhD Licensed Clinical Psychologist, practicing since 1973",
+    specialties: ' Individual therapy with adults and adolescents,Marital Therapy, Depression, Phobias, Stress, Sexual Abuse, Co-Dependency, Weight Issues.',
+    education: 'Southern Illinois University, PhD',
+    img: '../../Images/fGripka.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Cheryl Cox",
+    title: "Licensed Marriage and Family Therapist",
+    specialties: 'Individual, Couples, and Family Therapy. Credentialed as Registered Play Therapist – Supervisor Paneled provider with most major insurance companies.',
+    hours: 'Norfolk office',
+    img: '../../Images/cCox.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Muriel M. Ricker",
+    title: "Licensed Marriage and Family Therapist",
+    specialties: '20 years work with children of divorce. Provides Co-Parenting for divorcing parents to help them learn skills as they raise their children in separate homes.',
+    education: 'Villanova University, MS in Counseling; Philadelphia Child Guidance Clinic, post-graduate work in Marriage and Family Therapy',
+    other: 'Her recently published book, When the Walls Come Tumbling Down, guides families through the divorce process. Marital Therapy. Treats children and female adolescents experiencing high anxiety and developmental problems. Proficient in using Cognitive-Behavioral Therapy with patients suffering from anxiety and depression.', 
+    img: '../../Images/mRicker.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Paul F Dell",
+    title: "PhD, ABPP",
+    specialties: 'Treatment of posttraumatic and dissociative disorders; Consultation/Supervision for therapists learning to diagnose and treat dissociative identity disorder',
+    education: 'Pennsylvania State University, BS, 1970; University of Texas, PhD, 1977; University of Texas Medical Branch, Fellowship in Family Therapy, 1978',
+    other: 'National Register of Health Service Psychologists, Member; International Society for the Study of Trauma and Dissociation, Past President; Author: 2 books and 75 articles.', 
+    hours: 'Norfolk office',
+    img: '../../Images/pDell.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Denise Keeley",
+    title: "LCSW",
+    specialties: 'Individual and family therapy for adult and young adults. I am a clinical social worker with a medical background. I provide psychotherapy for those with depression, anxiety and medical illnesses. I have experience working with transgender clients including providing psychotherapy, providing written documentation for those seeking referrals to medical doctors for hormone therapy and for those pursuing surgical transition.',
+    education: 'Norfolk State University; Old Dominion University; Member of National Association of Social Workers',
+    hours: 'Day and evening appointments available as well as Saturday appointments',
+    img: '../../Images/dKeeley.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Michael Sullivan",
+    title: "Ph.D.",
+    specialties: 'trauma, anxiety and depression, chronic pain',
+    education: 'University of Oregon, Ph.D., M.A. Boston College, B.A.',
+    other: 'License: State of Virginia licensed clinical psychologist I bring years of wide-ranging experience to work with my clients. I have worked in inpatient and outpatient settings with a variety of clients over the years. I have been a consultant and workshop presenter. I have taught college-level courses and I am a published author. My private practice focuses on therapy with adultsand couples. I believe every client and his or her situation is unique. I do not believe in a one-size-fits-all approach to therapy. I use EMDR, cognitive-behavioral, solution-oriented, or other approaches as they fit clients’ needs. I also use plain old common sense and humor in liberal doses. I consider therapy a joint effort, a partnership, a “We’re working on this together” experience.', 
+    img: '../../Images/mSullivan.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Raleigh Phillips",
+    title: "PhD",
+    specialties: 'Psychological Testing and Individual Therapy.',
+    education: 'Dr. Raleigh Phillips attended Davidson College majoring in Psychology and Sociology.  After traveling in Europe and Asia for a year, he returned to work with inner city adolescents while studying Special Education, M.Ed. at the University of Georgia.  Doctoral Studies in Clinical Psychology followed at The Illinois School of Professional Psychology, earning a Psy. D., learning with professors from Northwestern and The University of Chicago. He has been in practice for 29 years with Riverpoint Psychiatric Associates in Norfolk..  Dr. Phillips is very happy to join his former “professor” and colleague, Dr. Michael Weissman, Ph. D. at Churchland Psychological Center.',
+    hours: 'Norfolk office; Monday through Thursday, 8:00 AM to 4 PM',
+    img: '../../Images/rPhillips.jpg',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Lindsey Pace",
+    title: "LCSW",
+    specialties: 'I’m Lindsey Pace and I’m a Licensed Clinical Social Worker.  I would consider it an honor and privilege to be on your mental health team. I received my Bachelor’s Degree in Psychology from Stamford University in 2005 and my Master’s Degree in Social Work from the University of Alabama in 2007. I primarily work with adults and couples in the areas of grief and loss, anxiety and depression, life transitions (new parents, empty-nesters, career change, etc.), caregiver burnout, and relationship issues',
+    education: 'My goal is to provide a warm, caring, and non-judgmental atmosphere where clients and I work in partnership to pursue positive growth and lifelong change. My approach to treatment is based primarily in cognitive behavioral therapy, however, I draw from a variety of schools of therapy according to what works best for each client. I don’t believe we can do this life well and fulfill our full potential without taking some time to examine our thought life and emotional health. I’ve experienced firsthand the gifts of therapy and I love nothing more than seeing others gain freedom, peace and connection through counseling and mental health care. improve their lives through counseling and mental health care.',
+    hours: 'Churchland office; Tuesday evenings, with additional days and times to be announced.',
+    img: '../../Images/lPace.png',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Rebecca Buck",
+    title: " LCSW",
+    specialties: 'Rebecca has 11 years of experience providing therapeutic services to children, adolescents, and adults in an individual, group, or family capacity.  I have provided services in inpatient, outpatient, and teletherapy settings in private practices and community services settings',
+    hours: 'Churchland and telehealth; flexible hours per client need.',
+    img: '../../Images/rBuck.png',
+    date: new Date(Date.now())
+  },
+  {
+    name: "Jennifer Hart",
+    title: "LCSW",
+    specialties: 'Treatment Orientation: Coaching, Cognitive Behavioral (CBT), Solution Focused Brief therapy (SFBT)',
+    education: 'Hi, I’m Jennifer Hart, LCSW. Throughout my career I have had the opportunity to work in both inpatient and outpatient settings. I also have a medical social work background so I understand the importance of managing both our physical and mental health. For the most part, I have experience working with adolescents and adults. My goal is to help you better understand yourself and to provide you with the tools necessary to cope with life struggles. The most important thing I am reminded of everyday as a helping professional is that we were not meant to be alone. I want to help build on your strengths using a person-centered approach through the therapeutic process.',
+    img: '../../Images/jHart.jpg',
+    date: new Date(Date.now())
   }
 ]
+// {
+//   name: "",
+//   title: "",
+//   specialties: '',
+//   education: '',
+//   other: '', 
+//   hours: '',
+//   img: '../../Images/sAsprey.jpg',
+//   date: new Date(Date.now())
+// },
 const resourcesSeed = [
   {
     catagory: "about",
@@ -128,7 +225,7 @@ const resourcesSeed = [
     catagory: "values",
     heading: "Core Values",
     body1:
-      "Be Honest and Transparent, Understand Each Business's Unique Needs, Look Out For Client's Best Interest, Client Success Is our Sucess, and Believe In Each And Every Business We Fund.",
+      "Be Honest and Transparent, Understand Each Client's Unique Needs, Look Out For Client's Best Interest, Client Success Is our Sucess, and Believe In Each And Every patient.",
       rating: 4,
       date: new Date(Date.now())
   },
@@ -146,6 +243,11 @@ const resourcesSeed = [
     body1:"Teletherapy is an option we offer to all of our patients under certain circumstances. Certainly, at present, in 2020, the world is faced with the Coronavirus pandemic, requiring that we stay at home is much as possible, and therefore offering this service allows each patient to continue their therapy without leaving their home. Each therapist in the practice uses the medium that they are most comfortable with and which best suits the patient’s preferences. We can conduct sessions over the Internet where the patient and therapist can see each other and communicate much as they would in the office, allowing the patient to either use their computer, tablet, or smart phone to connect with the therapist. Other options include Facetime, Skype, Zoom, Doxy, and others. Some methods of connecting are more secure than others. For example, both Zoom and Doxy are fully HIPAA compliant, meaning the highest level of security is offered to prevent any possible access by anybody other than the patient and therapist talking with each other. Skype and FaceTime offer less security, but are still acceptable. In some cases, for example, if a patient does not have a computer or smart phone, we can simply have the session conducted by telephone, as this is now permitted under the current health crisis, when normally it is not a covered service. Thus, there are many options available for the therapist to connect with his or her patient. Government regulations have been eased to allow for as much remote therapy as possible",
     rating: 5,
     date: new Date(Date.now())
+  },
+  {
+    catagory: "editform",
+    heading: "Form Submitionn",
+    body1: " For Hipaa compliency, Please click on the appropriate link below and the forms will be sent to you within one business day."
   }
 ];
 db.Staff

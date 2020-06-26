@@ -9,6 +9,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 // import Header from '../../components/Material-ui/Header';
 import MainFeaturedPost from '../layout/MainFeaturedPost';
 import FeaturedPost from '../layout/FeaturedPost';
+import Dbparagraph from '../layout/Dbparagraph'
 // import Main from '../../components/Material-ui/Main'; 
 // import Sidebar from '../../components/Material-ui/Sidebar';
 // import Footer from '../../components/Material-ui/Footer';
@@ -169,6 +170,7 @@ export default function AboutPage(props) {
               <FeaturedPost key={post.title} post={post}/>
             ))}
           </Grid>
+          <Dbparagraph catagory={"edithome"}/>
           {/* <Grid container spacing={5} className={classes.mainGrid}> */}
             {/* <Main title={"Welcome"} tab={"/aboutus"} />  */}
             {/* {props.selectedDashboard === "about" && <About />} */}

@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import {Link} from "react-router-dom"
 import Paper from '@material-ui/core/Paper';
+import Dbparagraph from '../layout/Dbparagraph'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,11 +36,16 @@ const useStyles = makeStyles((theme) => ({
   },
   h2theme: {
     color: theme.palette.secondary.dark,
-    paddingLeft: 40,
+    // paddingLeft: 40,
     margin: 15,
+    marginLeft: '25%',
+    marginRight: '25%',
+    // paddingRight: 40,
     textAlign: 'center',
     [theme.breakpoints.down('md')]: {
       fontSize: 38,
+      marginLeft: 25,
+    marginRight: 25,
     }
   },
   paper: {
@@ -62,9 +68,11 @@ export default function MediaCard() {
   Forms
 </Typography>
 
-<Typography variant="h2" component="h2" className={classes.h2theme}>
+{/* <Typography variant="subtitle2" component="h2" className={classes.h2theme}>
   For Hipaa compliency, please click the link below to send us a short message with what forms you need and we will send you the link with the forms via email. 
-</Typography>
+</Typography> */}
+<Dbparagraph catagory={"editform"}/>
+
       <Grid
   container
   direction="row"

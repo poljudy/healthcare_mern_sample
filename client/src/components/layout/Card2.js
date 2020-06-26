@@ -302,29 +302,8 @@ img: myimg
         
       />
       )}
-      <CardContent>
-        {/* <Typography variant="body2" color="textSecondary" component="p">
-         {props.body1}
-        </Typography>
-        {!props.body2 ? null : (
-        <Typography variant="body2" color="textSecondary" component="p">
-        <br />
-         {props.body2}
-        </Typography>
-        )}
-        {!props.body3 ? null : (
-        <Typography variant="body2" color="textSecondary" component="p">
-        <br />
-         {props.body3}
-        </Typography>
-        )}
-        <br />
-        {!props.footer ? null : (
-        <Typography variant="body2" color="textSecondary" component="p">
-         {props.footer}
-        </Typography>
-        )} */}
-      </CardContent>
+      {/* <CardContent>
+      </CardContent> */}
       <CardActions disableSpacing>
       {/* CAN ADD SOCIAL MEDIA LINKS HERE OR PERSONAL WEBSITES */}
         {/* <IconButton aria-label="add to favorites">
@@ -334,7 +313,7 @@ img: myimg
           <ShareIcon />
         </IconButton> */}
 {/* updatefunc(props.uid) called in modal */}
-        { user && user.role == "admin" &&
+        { user && user.role === "admin" &&
         <div>
         <Button onClick={()=> deletefunc(props.uid)}>Delete</Button>
         <Button onClick={()=> openModalUpdate(props.uid)}>Edit</Button>

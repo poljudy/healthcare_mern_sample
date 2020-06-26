@@ -100,7 +100,7 @@ const Payment = () => {
   Safely & Securely Make a Payment
 </Typography>
 <Typography variant="h2" component="h2" className={classes.secondaryheader}>
-If you havn't already, 
+If you haven't already, 
 <br />
  <Link target="_blank" 
                 rel="noopener noreferrer" 
