@@ -174,67 +174,99 @@ const staffSeed = [
 //   date: new Date(Date.now())
 // },
 const resourcesSeed = [
+  // {
+  //   catagory: "about",
+  //   heading: "About Us",
+  //   subtitle: "from the creator of GraphicKnowvel",
+  //   body1:
+  //     "We are a Philadelphia based company serving the needs of small businesses in need of a little cash.",
+  //     body2:
+  //     "View our values and mission statment to learn more.",
+  //     rating: 4,
+  //     date: new Date(Date.now())
+  // },
+  // {
+  //   catagory: "howitWorks",
+  //   heading: "What are your hours?",
+  //   body1:
+  //     "Each of our therapists has their own hours, please check their bio on the staff page for more information. The business office is open M-F 9am to 5pm. If you are experiencing a clinical emergency and cannot reach your therapist, please call the answering service at 757-671-3152 to be connected with the therapist on call.",
+  //     rating: 2,
+  //   date: new Date(Date.now())
+  // },
+  // {
+  //   catagory: "privacypolicy",
+  //   heading: "The Dead Zone",
+  //   body1:
+  //       "Please reproduce and share!",
+  //     body2:
+  //     "See terms of use",
+  //     rating: 1,
+  //           date: new Date(Date.now())
+  // },
+  // {
+  //   catagory: "termsofuse",
+  //   heading: "Terms of Use",
+  //   body1:
+  //     "Terms of use the sale of this product is not limited in any way.",
+  //     body2:
+  //     "No Copyright as of yet.",
+  //     rating: 1,
+  //     date: new Date(Date.now())
+  // },
+  // {
+  //   catagory: "missionstatement",
+  //   heading: "Mission Statement",
+  //   body1:
+  //     "Partnering with small businesses to help them grow by providing honest, transparent, and consultive funding solutions tailored to the individual needs of each business.",
+  //     rating: 3,
+  //     date: new Date(Date.now())
+  // },
+  // {
+  //   catagory: "values",
+  //   heading: "Core Values",
+  //   body1:
+  //     "Be Honest and Transparent, Understand Each Client's Unique Needs, Look Out For Client's Best Interest, Client Success Is our Sucess, and Believe In Each And Every patient.",
+  //     rating: 4,
+  //     date: new Date(Date.now())
+  // },
+  // {
+  //   catagory: "faq",
+  //   heading: "Does an application cost money?",
+  //   body1:
+  //     "No! It will always be free",
+  //     rating: 3,
+  //   date: new Date(Date.now())
+  // },
   {
-    catagory: "about",
-    heading: "About Us",
-    subtitle: "from the creator of GraphicKnowvel",
+    catagory: "schedule",
+    heading: "How do I schedule an appointment?",
     body1:
-      "We are a Philadelphia based company serving the needs of small businesses in need of a little cash.",
-      body2:
-      "View our values and mission statment to learn more.",
+      "Please call the main business office at 757-483-3404 and our office staff will take your information and help match you to the appropriate therapist. All of our therapists manage their own schedules, so the therapist will contact you directly to schedule your first appointment.",
       rating: 4,
-      date: new Date(Date.now())
-  },
-  {
-    catagory: "howitWorks",
-    heading: "What are your hours?",
-    body1:
-      "Each of our therapists has their own hours, please check their bio on the staff page for more information. The business office is open M-F 9am to 5pm. If you are experiencing a clinical emergency and cannot reach your therapist, please call the answering service at 757-671-3152 to be connected with the therapist on call.",
-      rating: 2,
     date: new Date(Date.now())
   },
   {
-    catagory: "privacypolicy",
-    heading: "The Dead Zone",
+    catagory: "insurance",
+    heading: "What insurance do you accept?",
     body1:
-        "Please reproduce and share!",
-      body2:
-      "See terms of use",
-      rating: 1,
-            date: new Date(Date.now())
-  },
-  {
-    catagory: "termsofuse",
-    heading: "Terms of Use",
-    body1:
-      "Terms of use the sale of this product is not limited in any way.",
-      body2:
-      "No Copyright as of yet.",
-      rating: 1,
-      date: new Date(Date.now())
-  },
-  {
-    catagory: "missionstatement",
-    heading: "Mission Statement",
-    body1:
-      "Partnering with small businesses to help them grow by providing honest, transparent, and consultive funding solutions tailored to the individual needs of each business.",
+      "We accept most insurance plans including Anthem Blue Cross Blue Shield, Tricare, Optima, and United Behavioral among many others.",
       rating: 3,
-      date: new Date(Date.now())
+    date: new Date(Date.now())
   },
   {
-    catagory: "values",
-    heading: "Core Values",
+    catagory: "howmuch",
+    heading: "How much will I have to pay for therapy?",
     body1:
-      "Be Honest and Transparent, Understand Each Client's Unique Needs, Look Out For Client's Best Interest, Client Success Is our Sucess, and Believe In Each And Every patient.",
-      rating: 4,
-      date: new Date(Date.now())
+      "Most of our clients use insurance to cover the cost of therapy, and the cost will vary depending on your particular plan. You can contact your insurance company to inquire about your benefits, copayments, and deductible",
+      rating: 2,
+    date: new Date(Date.now())
   },
-  {
-    catagory: "faq",
-    heading: "Does an application cost money?",
+    {
+    catagory: "medicine",
+    heading: "Can you prescribe medication for my depression or anxiety?",
     body1:
-      "No! It will always be free",
-      rating: 3,
+      "No, we don’t have a psychiatrist on staff and do not offer this service. If your therapist feels that medication might be warranted then an appropriate referral will be made.",
+      rating: 1,
     date: new Date(Date.now())
   },
   {
@@ -246,7 +278,7 @@ const resourcesSeed = [
   },
   {
     catagory: "editform",
-    heading: "Form Submitionn",
+    heading: "Form Submition",
     body1: " For Hipaa compliency, Please click on the appropriate link below and the forms will be sent to you within one business day."
   }
 ];
