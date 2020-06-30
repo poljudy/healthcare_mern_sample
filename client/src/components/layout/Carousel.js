@@ -10,6 +10,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+// const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 // const somethingelse = [
 //   {
@@ -42,6 +43,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const useStyles = makeStyles((theme) => ({
   root: {
     // maxWidth: 400,
+    // minHeight: ,
     flexGrow: 1,
   },
   header: {
@@ -52,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    // height: 255,
+    // height: 255, 
     display: 'block',
     // maxWidth: 400,
     overflow: 'hidden',
@@ -80,12 +82,13 @@ function Carousel(props) {
 
   return (
     <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
+      {/* <Paper square elevation={0} className={classes.header}> */}
         {/* <Typography>{props[activeStep].label}</Typography> */}
         {/* <Typography>{props.MyLocation.text}</Typography> */}
 
-      </Paper>
+      {/* </Paper> */}
       <AutoPlaySwipeableViews
+      interval={5000}
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}

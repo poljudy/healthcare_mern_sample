@@ -19,8 +19,8 @@ import Dbparagraph from '../layout/Dbparagraph'
 // import Link from '@material-ui/core/Link';
 // import MoreTabs from '../../components/AppBar/MoreTabs';
 import MainIMG from '../../Images/oceanHealthcare.jpg'
-import whoweareIMG from '../../Images/whoweare.png'
-import locationsIMG from '../../Images/locations.jpg'
+import whoweareIMG from '../../Images/mWeissman.jpg'
+import locationsIMG from '../../Images/mainIMG.jpg'
 // import {
 //   Button,
 // } from "@material-ui/core";

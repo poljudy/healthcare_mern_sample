@@ -23,6 +23,7 @@ const MyLocations = [
        link2: "cpc3210@yahoo.com",
        googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
        Images:[
+         '../../Images/mainIMG.jpg',
         '../../Images/churchland1.HEIC',
         '../../Images/churchland2.HEIC',       
         '../../Images/churchland3.HEIC',
@@ -41,6 +42,7 @@ const MyLocations = [
        link2: "cpc3210@yahoo.com",
        googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
        Images:[
+         '../../Images/norfolkIMG.jpg',
         '../../Images/norfolk1.HEIC',
         '../../Images/norfolk2.HEIC',       
         '../../Images/norfolk3.HEIC',
@@ -59,11 +61,7 @@ const MyLocations = [
    link2: "cpc3210@yahoo.com",
    googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
    Images:[
-    '../../Images/churchland1.HEIC',
-    '../../Images/churchland2.HEIC',       
-    '../../Images/churchland3.HEIC',
-    '../../Images/churchland4.HEIC',
-    '../../Images/churchland5.HEIC'
+    '../../Images/thirdIMG.jpg'
    ]
 }
 ]
@@ -99,6 +97,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-between',
     flexDirection: 'column',
     marginRight: 0,
+    // minHeight: 'max-content',
+    // alignItems:"stretch",
     marginLeft: 0
   },
   cardtheme: {

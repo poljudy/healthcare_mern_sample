@@ -10,6 +10,7 @@ const staffSchema = new Schema({
   hours: String,
   img: String,
   link: String,
+  rating: Number,
   date: { type: Date, default: Date.now }
 });
 
