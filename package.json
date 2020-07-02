@@ -16,6 +16,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.7.0",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.0",
     "dotenv": "^8.2.0",

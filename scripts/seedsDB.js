@@ -78,6 +78,7 @@ const staffSeed = [
     education: 'Master of Social Work, Norfolk State University, 1995 Bachelor of Arts, Psychology,  Old Dominion University, 1984. Mental health provider since 1986. Acknowledged in Who’s Who for her expertise in the treatment of military families, personality disorders, and depressive disorders. Trained in dialectical behavior therapy for treatment of PTSD dual diagnosis and multiple addictions. Addresses multiple facts of life – mental, physical, psychological, and social. Provides treatment for adults and adolescents.',
     other: 'Member, National Association of Social Workers, Academy of Certified Social Workers, and Psi Chi.', 
     hours: 'Churchland; flexible hours per client need.',
+    rating: 94,
     img: '../../Images/sAsprey.jpg',
     date: new Date(Date.now())
   },
@@ -126,7 +127,7 @@ const staffSeed = [
     specialties: 'Individual and family therapy for adult and young adults. I am a clinical social worker with a medical background. I provide psychotherapy for those with depression, anxiety and medical illnesses. I have experience working with transgender clients including providing psychotherapy, providing written documentation for those seeking referrals to medical doctors for hormone therapy and for those pursuing surgical transition.',
     education: 'Norfolk State University; Old Dominion University; Member of National Association of Social Workers',
     hours: 'Day and evening appointments available as well as Saturday appointments',
-    img: '../../Images/dKeeley.jpg',
+    img: '../../Images/dKeeley.JPG',
     rating: 90,
     date: new Date(Date.now())
   },
@@ -177,7 +178,51 @@ const staffSeed = [
     img: '../../Images/jHart.jpg',
     rating: 85,
     date: new Date(Date.now())
-  }
+  },
+  {
+    name: "Michelle Johnson",
+    title: "LCSW",
+    specialties: 'Social Work',
+    // education: 'Hi, I’m ...',
+    img: '../../Images/mJohnson.jpg',
+    rating: 84,
+    date: new Date(Date.now())
+  },
+  {
+    name: "Crystal Harris",
+    title: "LCSW",
+    specialties: 'Social Work',
+    // education: 'Hi, I’m ...',
+    img: '../../Images/cHarris.jpg',
+    rating: 83,
+    date: new Date(Date.now())
+  },
+  {
+  name: "Julie VanGosen",
+  title: "Office Manager",
+  rating: 82,
+  img: '../../Images/jVanGosen.jpg',
+  date: new Date(Date.now())
+},
+{
+  name: "jVanGosen",
+  title: "Assistant Office Manager",
+  rating: 81,
+  img: '../../Images/jMyers.jpg',
+  date: new Date(Date.now())
+},
+{
+  name: "Courtney Owens",
+  title: "Receptionist",
+  // specialties: '',
+  // education: '',
+  // other: '', 
+  // hours: '',
+  rating: 80,
+  img: '../../Images/cOwens.jpg',
+  date: new Date(Date.now())
+},
+
 ]
 // {
 //   name: "",
@@ -186,6 +231,7 @@ const staffSeed = [
 //   education: '',
 //   other: '', 
 //   hours: '',
+// rating: 79,
 //   img: '../../Images/sAsprey.jpg',
 //   date: new Date(Date.now())
 // },
