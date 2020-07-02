@@ -4,7 +4,7 @@ import StaffCard from './Staff'
 import Forms from './Forms'
 import Forum from './Forum'
 // import ContactUs from '../Features/ContactUs'
-// import Payment from '../Features/Payment'
+import Payment from './Payment'
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -120,7 +120,7 @@ export default function ScrollableTabsButtonAuto() {
           <Tab label="Locations" {...a11yProps(2)} />
           <Tab label="Forms" {...a11yProps(3)} />
           <Tab label="Payment" {...a11yProps(4)} />
-          <Tab label="Forum" {...a11yProps(5)} />
+          <Tab label="FAQs" {...a11yProps(5)} />
           <Tab label="Contact Us" {...a11yProps(6)} />
         </Tabs>
       </AppBar>
@@ -137,13 +137,12 @@ export default function ScrollableTabsButtonAuto() {
       <Forms />
       </TabPanel>
       <TabPanel value={value} index={4}>
-      {/* <Payment /> */}
-      <Typography variant="h1" component="h2" className={classes.h1theme}>
+      <Payment />
+      {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
   Safely & Securely Make a Payment
 </Typography>
 <Typography variant="h2" component="h2" className={classes.secondaryheader}>
-{/* If you haven't already, 
-<br /> */}
+
  <Link target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://hushforms.com/cpcpayment"
@@ -151,7 +150,7 @@ export default function ScrollableTabsButtonAuto() {
                 >
         Click this link to make an invoice for your payment
       </Link>
-</Typography>
+</Typography> */}
 <Dbparagraph catagory={"editpayment"}/>
       </TabPanel>
       <TabPanel value={value} index={5}>

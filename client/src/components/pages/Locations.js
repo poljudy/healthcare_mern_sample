@@ -24,6 +24,7 @@ const MyLocations = [
        googlemaps: "https://goo.gl/maps/VhTiMXzk6g7FabFMA",
        Images:[
          '../../Images/mainIMG.jpg',
+         '../../Images/ChurStaff.jpg',
         '../../Images/churchland1.HEIC',
         '../../Images/churchland2.HEIC',       
         '../../Images/churchland3.HEIC',

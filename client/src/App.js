@@ -27,6 +27,9 @@ import Footer from './components/layout/Footer'
 import Payment from './components/pages/Payment'
 import ContactUs from './components/pages/ContactUs';
 import Forms from './components/pages/Forms';
+import Success from './components/pages/success';
+import PayFail from './components/pages/PayFail';
+import '@stripe/stripe-js';
 // import Plans from './components/pages/Plans'
 // import Checkout from './components/pages/Checkout'
 
@@ -75,6 +78,8 @@ const App = () => {
                           <Route exact path="/contact" component={ContactUs} />
                           <Route exact path="/forms" component={Forms} />
                           <Route exact path="/home" component={AllTabs} />
+                          <Route exact path="/success" component={Success} />
+                          <Route exact path="/payfail" component={PayFail} />
                           {/* <Route exact path="/checkout" component={Checkout} />
                           <Route exact path="/plans" component={Plans} /> */}
                         </Switch>

@@ -101,7 +101,7 @@ export default function MediaCard() {
         <Button size="small" color="primary" target="_blank" 
                 rel="noopener noreferrer" className={classes.footerTheme}
                 href="https://hushforms.com/contactcpc">
-          Request Forms
+          After you have scheduled your first appointment, please request the new patient forms
         </Button>
         {/* <Button size="small" color="primary">
           Fill Out 
