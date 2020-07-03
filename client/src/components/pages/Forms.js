@@ -8,9 +8,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 // import {Link} from "react-router-dom"
 import Paper from '@material-ui/core/Paper';
 import Dbparagraph from '../layout/Dbparagraph'
+import FormsIMG from '../../Images/formsIMG.png'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     borderColor : theme.palette.primary.dark
   },
   media: {
-    height: 140,
+    height: 180,
+  backgroundSize: 'contain'
   },
   h1theme: {
     color: theme.palette.secondary.dark,
@@ -80,11 +83,14 @@ const Forms = () => {
   alignItems="center"
 >
  <Paper className={classes.paper}>
+ <Link    target="_blank" 
+                rel="noopener noreferrer" className={classes.footerTheme}
+                href="https://hushforms.com/contactcpc">
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="http://www.counselinghr.com/wp-content/uploads/2020/03/Phone_font_awesome.png"
+          image={FormsIMG}
           title="Teletherapy Concent Form"
         />
         <CardContent>
@@ -109,15 +115,19 @@ const Forms = () => {
         </Button> */}
       </CardActions>
     </Card>
+    </Link>
     </Paper>
     {/* // 2nd */}
     {/* > */}
  <Paper className={classes.paper}>
+ <Link    target="_blank" 
+                rel="noopener noreferrer" className={classes.footerTheme}
+                href="https://hushforms.com/contactcpc">
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="http://www.counselinghr.com/wp-content/uploads/2020/03/Phone_font_awesome.png"
+          image={FormsIMG}
           title="Teletherapy Concent Form"
         />
         <CardContent>
@@ -130,7 +140,7 @@ const Forms = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" target="_blank" 
+        <Button size="small"  color="primary" target="_blank" 
                 rel="noopener noreferrer" className={classes.footerTheme}
                 href="https://hushforms.com/contactcpc">
           Request Forms
@@ -140,6 +150,7 @@ const Forms = () => {
         </Button> */}
       </CardActions>
     </Card>
+    </Link>
     </Paper>
   {/* 3rd */}
   {/* <Paper className={classes.paper}>
