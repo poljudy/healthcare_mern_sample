@@ -10,6 +10,7 @@ const resourcesSchema = new Schema({
   rating: Number,
   link: String,
   author: String,
+  display: {type: Boolean},
   date: { type: Date, default: Date.now }
 });
 

@@ -121,7 +121,7 @@ export default function ScrollableTabsButtonAuto() {
           <Tab label="Forms" {...a11yProps(3)} />
           <Tab label="Payment" {...a11yProps(4)} />
           <Tab label="FAQs" {...a11yProps(5)} />
-          <Tab label="Contact Us" {...a11yProps(6)} />
+          {/* <Tab label="Contact Us" {...a11yProps(6)} /> */}
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -156,14 +156,12 @@ export default function ScrollableTabsButtonAuto() {
       <TabPanel value={value} index={5}>
       <Forum />
       </TabPanel>
-      <TabPanel value={value} index={6}>
-      {/* <ContactUs /> */}
+      {/* <TabPanel value={value} index={6}>
       <Typography variant="h1" component="h2" className={classes.h1theme}>
   Contact Us
 </Typography>
 <Typography variant="h2" component="h2" className={classes.secondaryheader}>
-{/* If you haven't already, 
-<br /> */}
+
  <Link target="_blank" 
                 rel="noopener noreferrer" 
                 href="https://hushforms.com/contactcpc"
@@ -173,7 +171,7 @@ export default function ScrollableTabsButtonAuto() {
       </Link>
 </Typography>
 <Dbparagraph catagory={"editcontact"}/>
-      </TabPanel>
+      </TabPanel> */}
     </div>
   );
 }

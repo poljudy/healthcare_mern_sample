@@ -11,6 +11,7 @@ const staffSchema = new Schema({
   img: String,
   link: String,
   rating: Number,
+  therapist: {type: Boolean, default: true},
   date: { type: Date, default: Date.now }
 });
 
