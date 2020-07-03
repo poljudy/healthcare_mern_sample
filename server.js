@@ -1,6 +1,30 @@
 const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
+// force redirect to https
+const app = express();
+require("dotenv").config();
+// env = process.env.NODE_ENV || 'development';
+
+// var forceSsl = function (req, res, next) {
+//    if (req.headers['x-forwarded-proto'] !== 'https') {
+//        return res.redirect(['https://', req.get('Host'), req.url].join(''));
+//       }
+//    return next();
+// };
+
+// app.configure(function () {
+
+//    if (env === 'production') {
+//        app.use(forceSsl);
+//    }
+//   })
+app.get('*',function(req,res,next){
+  if(req.headers['x-forwarded-proto']!='https')
+    res.redirect('https://counselinghr.com/'+req.url)
+  else
+    next() /* Continue to other routes if we're not redirecting */
+})
 // const bodyParser = require('body-parser')
 // const cors = require('cors');
 // const Stripe = require("stripe")
@@ -13,9 +37,7 @@ const path = require('path');
 
 // const Stripe = require("stripe")
 // const stripe = require('stripe')('sk_test_51Gz5xTHeS1LR0EpisMcbsZNukINqcnSxQQZdVrjHaypqCT8GkKUqc0YrzLhlCUTCixee8lVw8iD09Z0vvTb0x5DQ00T0CmRt0C');
-require("dotenv").config();
 
-const app = express();
 
 // Connect Database
 connectDB();

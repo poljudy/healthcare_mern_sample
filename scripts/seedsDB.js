@@ -181,10 +181,12 @@ const staffSeed = [
   },
   {
     name: "Michelle Johnson",
-    title: "LCSW",
-    specialties: 'Social Work',
-    // education: 'Hi, I’m ...',
-    img: '../../Images/mJohnson.jpg',
+    title: "LCSW, CSAC, CTS, MAC, CADC",
+    specialties: 'Adult survivors of neglect, sexual, physical, and emotional abuse. Trauma/PTSD; Adult Children of Alcoholics (ACA); Substance Abuse/Co-Occurring; Complex comorbidity/dual diagnoses: depression and anxiety; mood disorders; post foster care issues. Licensed to practice independently as a clinical social worker and psychotherapist in the state of Virginia.  Certified Trauma Specialist.  Master of Addictions Counselor. Certified Substance Abuse Counselor.  Certified Alcohol and Drug Counselor.',
+  education: 'Graduate degree (MSW) in Clinical Social Work from Norfolk State University in Norfolk, VA.  Undergraduate degree (BSW) in Social Work from Norfolk State University. Experience: Throughout the past 20 years I have worked providing services in mental health, substance abuse, psychoeducation, public awareness, training, and guest speaking to a wide spectrum of communities addressing substance abuse- and mental health-related issues',
+  other: ' I practice primarily in Cognitive Behavioral Therapy and Trauma-Focus Model/Family Systems Theory; however, also drawing from a variety of schools of therapy.  Psychodynamic, Narrative Therapy, Psychoeducation/Group therapy, Supportive Therapy, and Brief Therapy in the context of applying Critical Thinking (CT) Skills to the planned change process.  ', 
+  hours: 'Adults 18+; Young adults exiting the foster care system; and some adolescents under special circumstances.',
+    img: '../../Images/mJohnson.png',
     rating: 84,
     date: new Date(Date.now())
   },
