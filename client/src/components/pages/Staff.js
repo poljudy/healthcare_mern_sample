@@ -186,7 +186,7 @@ Welcome {user.name}
     }
     {user && user.role === "admin" && 
 <div>
-<Button onClick={randomtext()}>Refresh</Button>
+<Button onClick={randomtext}>Refresh</Button>
 <Button onClick={openModalAdd}>Add a staff member</Button>
 </div>
 }
@@ -196,7 +196,7 @@ Welcome {user.name}
   justify="space-evenly"
   alignItems="stretch"  
 >
-      {StaffList&& StaffList.map(staff => (
+      {StaffList && StaffList.map(staff => (
         <Grid item xs={12} sm={6} md={4} className={classes.cardtheme}>
 <Card 
 className={classes.cardtheme}
