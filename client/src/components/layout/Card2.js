@@ -1,47 +1,32 @@
 import React, { useContext, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-// import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-// import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-// import Typography from '@material-ui/core/Typography';
-// import { red } from '@material-ui/core/colors';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-// import { Button } from '@material-ui/core';
-// import MoreVertIcon from '@material-ui/icons/MoreVert';
-// import Divider from '@material-ui/core/Divider'
+
 import AuthContext from '../../context/auth/authContext';
 import Axios from "axios";
-import TextField from '@material-ui/core/TextField';
-import Modal from "@material-ui/core/Modal";
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+
+import { makeStyles } from '@material-ui/core/styles';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {
-  Grid,
   Typography,
   Button,
-  // ListItemAvatar,
+  Fade,
+  Modal,
+  Backdrop,
+  TextField,
+  IconButton,
+  Collapse,
+  CardActions,
+  CardContent,
+  CardMedia,
+  CardHeader,
+  Card
   // Avatar,
   // ListItemText,
   // Link
 } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
-    // maxWidth: ,
     margin: 15,
     border: 1,
-    // backgroundColor: "inherit",
-    // display: 'flex',
-    // // justifyContent: 'space-between',
-    // flexDirection: 'column',
-    // alignItems: "stretch",
   },
   media: {
     // height: 0,
@@ -64,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  // avatar: {
-  //   backgroundColor: red[500],
-  // },
   theming: {
     color: theme.palette.secondary.dark,
     margin: 8,
@@ -118,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 const Card2 = (props) => {
-// export default function StaffCard(props) {
+
   // if(backgroundId === i){
   //   classes
   // }
@@ -128,16 +110,7 @@ const Card2 = (props) => {
 
 const [myID, setMyID] = React.useState(null)
   const [open2, setOpen2] = React.useState(false);
-  // const handleOpen2 = () => {
-  //   setOpen2(true);
-  // };
-  // const handleClose2 = () => {
-  //   setOpen2(false);
-  // };
-  // const openModalUpdate = () => {
-  //   // setaddResourceState(true)
-  //   handleOpen2()
-  // }
+
   async function handleOpen2() {
     setOpen2(true);
   }
@@ -166,31 +139,15 @@ const [myID, setMyID] = React.useState(null)
     if(props.footer){
       setmyfooterU(props.footer)
     }
-
-
-
     // console.log("clicked modal")
 setMyID(myid)
     handleOpen2()
   }
   let i = props.id
-  // const [expanded, setExpanded] = React.useState(false);
   const [expandedId, setExpandedId] = React.useState(-1);
   const handleExpandClick = i => {
     setExpandedId(expandedId === i ? -1 : i);
   };
-//   const [backgroundId, setBackgroundId] = React.useState(-1);
-//   const handlebackgroundColor = i => {
-// setBackgroundId(backgroundId === i ? -1 :i);
-//   }
-// const [myheadingU, setmyheadingU] = useState(props.title);
-// const [mycatagoryU, setmycatagoryU] = useState(props.catagory);
-// const [mysubtitleU, setmysubtitleU] = useState(props.subtitle);
-// // const [myimg, setmyimg] = useState("https://cdn.pixabay.com/photo/2017/04/09/16/40/batman-2216148_1280.jpg");
-// // const [mylink, setmylink] = useState("");
-// const [mybody1U, setmybody1U] = useState(props.body1);
-// const [mybody2U, setmybody2U] = useState(props.body2);
-// const [myratingU, setmyratingU] = useState(props.rating);
 
 const [myheadingU, setmyheadingU] = useState("");
 const [mycatagoryU, setmycatagoryU] = useState("");
@@ -267,7 +224,7 @@ img: myimg
 
     <Card className={classes.root} elevation={6} id={props.id}>
       <CardHeader
-      
+      // copy avatar att to makethemes above before using
         // avatar={
         //   <Avatar aria-label="recipe" className={classes.avatar}>
         //     R
@@ -366,27 +323,6 @@ img: myimg
          {props.footer}
         </Typography>
         )}
-          {/* <Typography paragraph>
-           {props.body1}
-          </Typography> */}
-          {/* <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-            heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-            browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-            and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-            pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-            again without stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography> */}
         </CardContent>
       </Collapse>
     </Card>
@@ -409,16 +345,7 @@ img: myimg
      >
      <Fade in={open2}>
      <div className={classes.modalPaper}>
-     {/* <Grid
-  container
-  direction="row"
-  justify="center"
-  alignItems="center"
-> */}
-    {/* <div className={classes.root}> */}
-      {/* <div>
-      <div><h2>Add a FAQ</h2></div>
-      <br /> */}
+
       <div><h2>edit This Faq</h2></div>
       <TextField
           label="Heading / Name"
@@ -438,7 +365,7 @@ img: myimg
           onChange={(e)=> setmysubtitleU(e.target.value)}
           // helperText="Add a link"
         />
-        {props.axiosL == "resources" && 
+        {props.axiosL === "resources" && 
            <TextField
           label="Catagory"
           id="margin-none"
@@ -449,7 +376,7 @@ img: myimg
           helperText="for future search results"
         />
         }
-        {props.axiosL == "staff" && 
+        {props.axiosL === "staff" && 
         <TextField
           label="img"
           id="margin-none"
@@ -460,7 +387,7 @@ img: myimg
           helperText="change img url to the format '../../Images/jDoe.png'"
         />
         }
-        {props.axiosL == "resources" &&
+        {props.axiosL === "resources" &&
              <TextField
           label="rating"
           id="margin-none"
@@ -507,7 +434,7 @@ img: myimg
         />
 
         {/*  */}
-        {props.axiosL == "staff" && 
+        {props.axiosL === "staff" && 
                         <TextField
           id="filled-full-width"
           label="Secondary Text"
@@ -526,7 +453,7 @@ img: myimg
           // if props.url = staff then show body3 and 
         />
         }
-        {props.axiosL == "staff" && 
+        {props.axiosL === "staff" && 
                         <TextField
           id="filled-full-width"
           label="Hours/ footer"
@@ -550,30 +477,11 @@ img: myimg
 
       <Button onClick={updateFunc}>Update</Button>
       <Button onClick={handleClose2}>exit</Button>
-      {/* </div>
-      <div> */}
+    
 {/* <div><h2>How it will look</h2></div> */}
-{/* <Paper className={classes.paper}> */}
-    {/* <Card
 
-  title={myheadingU}
-  subtitle={mysubtitleU}
-   body1={mybody1U}
-   body2={mybody2U} */}
    <Card className={classes.root} elevation={6} id={props.id}>
       <CardHeader
-      
-        // avatar={
-        //   <Avatar aria-label="recipe" className={classes.avatar}>
-        //     R
-        //   </Avatar>
-        // }
-        // action={
-        //   <IconButton aria-label="settings">
-        //     <MoreVertIcon />
-        //   </IconButton>
-        // } 
-           
         title={
           <Typography gutterBottom variant="subtitle2" className={classes.titletheming}>
             {myheadingU}

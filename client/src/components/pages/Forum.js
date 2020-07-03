@@ -157,12 +157,12 @@ useEffect(() => {
   randomtext()
 }, [])
 
-function deletefunc(id){
-  console.log(id)
-  Axios.delete("/api/resources/"+ id)
-  .then(res => randomtext())
-.catch(err => console.log(err))
-};
+// function deletefunc(id){
+//   console.log(id)
+//   Axios.delete("/api/resources/"+ id)
+//   .then(res => randomtext())
+// .catch(err => console.log(err))
+// };
 const [myheading, setmyheading] = useState("");
 const [mycatagory, setmycatagory] = useState("");
 const [mysubtitle, setmysubtitle] = useState("");
@@ -262,7 +262,7 @@ Welcome {user.name}
   Frequently Asked Questions & Important Information
 </Typography>
 {/* only if role== admin show button */}
-{user && user.role == "admin" && 
+{user && user.role === "admin" && 
 <div>
 <Button onClick={randomtext}>Refresh</Button>
 <Button onClick={openModalAdd}>Add a FAQ</Button>

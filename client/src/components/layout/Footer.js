@@ -1,30 +1,30 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+// import Container from '@material-ui/core/Container';
+// import Typography from '@material-ui/core/Typography';
+// import Link from '@material-ui/core/Link';
 // import ContactUs from '../HomeComponent/ContactUs'
 import ContactUs from './ContactUs';
 import Box from '@material-ui/core/Box';
-import { colors } from '@material-ui/core';
+// import { colors } from '@material-ui/core';
 // import theme from "../Material-ui/Theme";
-import theme from "../theme/Theme";
-function Copyright() {
-  return (
-    <>
-    {/* <Typography variant="body2" color="textSecondary" align="center">
+// import theme from "../theme/Theme";
+// function Copyright() {
+//   return (
+//     <>
+//     <Typography variant="body2" color="textSecondary" align="center">
     
-      {'Copyright © '} */}
-      {/* <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '} */}
-      {/* {new Date().getFullYear()}
-      {'.'}
-    </Typography> */}
-    </>
-  );
-}
+//       {'Copyright © '}
+//       <Link color="inherit" href="https://material-ui.com/">
+//         Your Website
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//     </>
+//   );
+// }
 
 const useStyles = makeStyles(theme => ({
   footer: {

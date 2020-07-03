@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 // import Card from '@material-ui/core/Card';
 // import CardActionArea from '@material-ui/core/CardActionArea';
@@ -116,7 +116,7 @@ h1theme: {
       handleOpen()
     }
     async function saveDB() {
-        if(mySwitch == "add"){
+        if(mySwitch === "add"){
             // axios with add
             Axios.post("/api/resources/catagory/:"+props.catagory, {
                 // author: user.id,
@@ -130,7 +130,7 @@ h1theme: {
              .then(res => console.log(res))
              .then(alert("Updated Resource"))
              .catch(err => alert(err));
-        }else if(mySwitch == "edit"){
+        }else if(mySwitch === "edit"){
             // axios with edit
             Axios.put("/api/resources/catagory/:"+props.catagory, {
                 // author: user.id,
@@ -166,7 +166,7 @@ h1theme: {
     return (
         <>
         {/* {console.log(DBINFO)} */}
-        {user && user.role == "admin" && 
+        {user && user.role === "admin" && 
 <div>
 <Button onClick={randomtext}>Refresh</Button>
 {!DBINFO && 

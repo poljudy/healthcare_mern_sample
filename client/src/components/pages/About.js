@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
@@ -41,18 +41,18 @@ const useStyles = makeStyles(theme => ({
       },
 }));
 
-const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
+// const sections = [
+//   { title: 'Technology', url: '#' },
+//   { title: 'Design', url: '#' },
+//   { title: 'Culture', url: '#' },
+//   { title: 'Business', url: '#' },
+//   { title: 'Politics', url: '#' },
+//   { title: 'Opinion', url: '#' },
+//   { title: 'Science', url: '#' },
+//   { title: 'Health', url: '#' },
+//   { title: 'Style', url: '#' },
+//   { title: 'Travel', url: '#' },
+// ];
 
 const mainFeaturedPost = {
   title: 'Churchland Psychological Center',
@@ -119,39 +119,39 @@ const featuredPosts = [
 ];
 
 
-const sidebar = {
-  title: 'Contact Us',
-  description:
-    'Churchland Psychological Center 3101 American Legion Road, Suite 21B Chesapeake, VA 23321',
-    // Email Us
-    number: '(757) 483-3404 (for all offices)',
-    email: 'cpc3210@yahoo.com',
+// const sidebar = {
+//   title: 'Contact Us',
+//   description:
+//     'Churchland Psychological Center 3101 American Legion Road, Suite 21B Chesapeake, VA 23321',
+//     // Email Us
+//     number: '(757) 483-3404 (for all offices)',
+//     email: 'cpc3210@yahoo.com',
     
-    // Other locations',
-  archives: [
-    { title: 'About', url: 'about' },
-    { title: 'How it Works', url: 'howitworks' },
-    { title: 'Teletherapy', url: 'teletherapy' },
-    { title: 'Blog', url: 'blog' },
-    { title: 'Faq', url: 'faq' },
-    { title: 'Reviews', url: 'reviews' },
-    { title: 'Values', url: 'values' },
-    { title: 'Privacy Policy', url: 'privacypolicy' },
-    { title: 'Terms of Use', url: 'termsofuse' },
-    { title: 'Contact', url: 'contact' },
-    { title: 'Mission Statement', url: 'missionstatement' },
-  ],
-  social: [
-    { name: 'GitHub', icon: GitHubIcon },
-    { name: 'Twitter', icon: TwitterIcon },
-    { name: 'Facebook', icon: FacebookIcon },
-  ],
-};
+//     // Other locations',
+//   archives: [
+//     { title: 'About', url: 'about' },
+//     { title: 'How it Works', url: 'howitworks' },
+//     { title: 'Teletherapy', url: 'teletherapy' },
+//     { title: 'Blog', url: 'blog' },
+//     { title: 'Faq', url: 'faq' },
+//     { title: 'Reviews', url: 'reviews' },
+//     { title: 'Values', url: 'values' },
+//     { title: 'Privacy Policy', url: 'privacypolicy' },
+//     { title: 'Terms of Use', url: 'termsofuse' },
+//     { title: 'Contact', url: 'contact' },
+//     { title: 'Mission Statement', url: 'missionstatement' },
+//   ],
+//   social: [
+//     { name: 'GitHub', icon: GitHubIcon },
+//     { name: 'Twitter', icon: TwitterIcon },
+//     { name: 'Facebook', icon: FacebookIcon },
+//   ],
+// };
 
 export default function AboutPage(props) {
   // console.log(props.match.params.name)
   const classes = useStyles();
-  const [selectedDashboard, setSelectedDashboard] = React.useState('about')
+  // const [selectedDashboard, setSelectedDashboard] = React.useState('about')
 
   return (
     <>

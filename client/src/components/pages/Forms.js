@@ -8,7 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 import Paper from '@material-ui/core/Paper';
 import Dbparagraph from '../layout/Dbparagraph'
 
@@ -58,8 +58,8 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: 40
   },
 }));
-
-export default function MediaCard() {
+const Forms = () => {
+// export default function MediaCard() {
   const classes = useStyles();
 
   return (
@@ -98,7 +98,8 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" target="_blank" 
+        <Button type="link" size="small" color="primary" 
+                target="_blank" 
                 rel="noopener noreferrer" className={classes.footerTheme}
                 href="https://hushforms.com/contactcpc">
           After you have scheduled your first appointment, please request the new patient forms
@@ -168,3 +169,4 @@ export default function MediaCard() {
 </>
   );
 }
+export default Forms;

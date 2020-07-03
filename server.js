@@ -19,12 +19,6 @@ require("dotenv").config();
 //        app.use(forceSsl);
 //    }
 //   })
-app.get('*',function(req,res,next){
-  if(req.headers['x-forwarded-proto']!='https')
-    res.redirect('https://counselinghr.com/'+req.url)
-  else
-    next() /* Continue to other routes if we're not redirecting */
-})
 // const bodyParser = require('body-parser')
 // const cors = require('cors');
 // const Stripe = require("stripe")
@@ -45,6 +39,14 @@ connectDB();
 // Init Middleware
 
 app.use(express.json({ extended: false }));
+  if(process.env.NODE_ENV === 'production') {
+  app.get('*',function(req,res,next){
+    if(req.headers['x-forwarded-proto']!='https')
+      res.redirect('https://counselinghr.com/'+req.url)
+    else
+      next() /* Continue to other routes if we're not redirecting */
+  })
+  }
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
 
