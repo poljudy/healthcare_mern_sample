@@ -65,8 +65,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     
   },
-  dropdownmenu: {
-    backgroundColor: theme.palette.background.paper,
+  textField: {
+    backgroundColor: theme.palette.background.default,
   },
   modal: {
     display: 'flex',
@@ -186,9 +186,10 @@ const useStyles = makeStyles((theme) => ({
 
       <TextField
           label="Amount"
-          id="margin-none number"
-         
-          // className={classes.textField}
+          // id="margin-none number"
+          id="outlined-basic"
+          variant="outlined"
+          className={classes.textField}
           value={myQuantity}
           onChange={(e)=> setMyQuantity(e.target.value)}
           // onChange={(event, myQuantity) => setMyQuantity(myQuantity)}
@@ -196,8 +197,10 @@ const useStyles = makeStyles((theme) => ({
         />
           <TextField
           label="Patients Name"
-          id="margin-none"
-          // className={classes.textField}
+          // id="margin-none"
+          id="outlined-basic"
+          variant="outlined"
+          className={classes.textField}
           value={patient}
           onChange={(e)=> setPatient(e.target.value)}
           // helperText="for future search results"
@@ -211,10 +214,12 @@ const useStyles = makeStyles((theme) => ({
           // helperText="for future search results"
         />
         
-<Button onClick={openModalAdd}>Please choose a Therapist</Button>
+<Button 
+variant="outlined" color="primary"
+onClick={openModalAdd}>Click to choose a Therapist</Button>
 
           
-    <Button role="link" onClick={handleClick}>
+    <Button role="link" variant="contained" onClick={handleClick}>
       Checkout
     </Button>
     </form>
