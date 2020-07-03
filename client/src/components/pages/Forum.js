@@ -271,7 +271,7 @@ Welcome {user.name}
 <Button onClick={openModalAdd}>Add a FAQ</Button>
 </div>
 }
-{/* {!data ? null : ( */}
+
   <div> 
 <Grid
   container
