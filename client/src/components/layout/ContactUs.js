@@ -57,7 +57,7 @@ const sidebar = {
 const ContactUs = props => {
 
     const classes = useStyles();
-    const [status, setstatus] = useState("")
+    // const [status, setstatus] = useState("")
 
   // function submitForm(event) {
   //       event.preventDefault();

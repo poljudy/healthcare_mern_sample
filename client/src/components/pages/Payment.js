@@ -1,18 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-import Card3 from '../layout/Card3'
+// import useAxios from "axios-hooks";
+import Axios from "axios";
+// import Card3 from '../layout/Card3'
 import {
   TextField,
   Typography,
   Button,
   makeStyles,
-  Paper
+  Paper,
+  Modal,
+  Fade,
+  Backdrop
     // ListItemAvatar,
   // Avatar,
   // ListItemText,
   // Link
 } from "@material-ui/core";
-import AlertState from '../../context/alert/AlertState';
+// import AlertState from '../../context/alert/AlertState';
 const stripePromise = loadStripe('pk_live_51GzAYhLa9svkYtX6ly1T2LWxFE5QI6qP0DQGZJvofGRV9tTEPXmvw5r39wb3qk58Gnc2mx0KRdwmFUOXO7rUnmbe00BE7qf6fC');
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,21 +64,83 @@ const useStyles = makeStyles((theme) => ({
   secondaryheader: {
     textAlign: 'center',
     
-  }
+  },
+  dropdownmenu: {
+    backgroundColor: theme.palette.background.paper,
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    // backgroundColor: lightGreen[500],
+    overflow: 'scroll',
+    // maxWidth: '100%',
+    backgroundColor: 'transparent',
+      boxShadow: 'none',
+    // backgroundColor: theme.palette.background.paper,
+    // height: '75%',
+    // width: '75%',
+    // alignContent: 'center',
+    // color: 'white',
+    padding: theme.spacing(3),
+    marginTop: 20
+  },
+  modalPaper: {
+    padding: theme.spacing(2),
+    margin: theme.spacing(5),
+    marginLeft: '15%',
+    marginRight: '15%',
+    backgroundColor: theme.palette.secondary.main,
+    textAlign: 'center'
+  },
+  margin: {
+    margin: theme.spacing(1),
+  },
 }));
 // function App() {
   const Payment = () => {
     const classes = useStyles();
+
+    const [open, setOpen] = useState(false);
+  async function handleOpen() {
+    setOpen(true);
+  }
+  async function handleCloseName(name){
+    setTherapist(name)
+    setOpen(false)
+  }
+  async function handleClose() {
+    setOpen(false);
+  }
+  async function openModalAdd() {
+    getStaffList()
+    console.log("clicked modal")
+    handleOpen()
+  }
     // const toCent = amount => amount * 100;
     const [myQuantity, setMyQuantity] = useState();
     const [patient, setPatient] = useState("");
-    const [relationship, setRelationship] = useState("");
-    const myDesc = 'patients name:  '+ patient +'by '+ relationship;
+    const [Therapist, setTherapist] = useState('Main Office Payment');
+    const [StaffList, setStaffList] = useState([]);
+    // const [relationship, setRelationship] = useState("");
+  async function getStaffList(event) {
+    Axios.get('/api/staff/all')
+    .then(res => {
+      const mydata = res.data;
+      setStaffList(mydata)
+      console.log(StaffList)
+    })
+    .catch(err => alert(err));
+    // setAnchorEl(event.currentTarget);
+    }
+    const myDesc = 'patients name:  '+ patient + 'paying ' + Therapist;
+    
     const handleClick = async (event) => {
-      if(patient !== "" && patient.length > 1){
-      // When the customer clicks on the button, redirect them to Checkout.
-      const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({
+      if(patient !== "" && patient.length > 1 && Therapist !== null ){
+        // When the customer clicks on the button, redirect them to Checkout.
+        console.log(Therapist + "therapist name && my Desc: " + myDesc)
+        const stripe = await stripePromise;
+        const { error } = await stripe.redirectToCheckout({
         // product: [
         // ],
         // item: [{}],
@@ -99,10 +166,15 @@ const useStyles = makeStyles((theme) => ({
       // error, display the localized error message to your customer
       // using `error.message`.
     }else{
-      alert("Please fill out who you are paying for")
+      alert("Please Refresh the page &/or fill out who you are paying for")
       
     }
     };
+  useEffect(() => {
+      getStaffList()
+    }, [])
+    
+    
   return (
     <>
     <Typography variant="h1" component="h2" className={classes.h1theme}>
@@ -130,24 +202,60 @@ const useStyles = makeStyles((theme) => ({
           onChange={(e)=> setPatient(e.target.value)}
           // helperText="for future search results"
         />
-            {/* <TextField
-          label="Relationship to Patient"
+           <TextField
+          label="Therapist"
           id="margin-none"
           // className={classes.textField}
-          value={relationship}
-          onChange={(e)=> setRelationship(e.target.value)}
+          value={Therapist}
+          // onChange={(e)=> setPatient(e.target.value)}
           // helperText="for future search results"
-        /> */}
-             {/* <TextField */}
+        />
+        
+<Button onClick={openModalAdd}>Please choose a Therapist</Button>
+
+          
     <Button role="link" onClick={handleClick}>
       Checkout
     </Button>
     </form>
     
     </Paper>
+    <Modal
+     
+        
+     aria-labelledby="server-modal-title"
+     aria-describedby="server-modal-description"
+     className={classes.modal}
+    //  className={classes.paper}
+     open={open}
+     onClose={handleClose}
+     closeAfterTransition
+     BackdropComponent={Backdrop}
+     BackdropProps={{
+       timeout: 500,
+     }}
+     
+     >
+     <Fade in={open}>
+     <div className={classes.modalPaper}>
+     {StaffList && StaffList.map(staff =>(
+      <Button 
+      variant="contained" size="large" color="primary" 
+      className={classes.margin}onClick={()=>handleCloseName(staff.name)}
+      >
+      {staff.name}
+        </Button>
+     ))}
+{/* <Button variant="outlined" onClick={()=>handleCloseName(staff.name)}>{staff.name}</Button> */}
+
+     </div>
+     </Fade>
+    
+     </Modal>
     </>
   );
 }
+
 export default Payment;
 
 
