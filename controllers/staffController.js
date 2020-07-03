@@ -15,6 +15,12 @@ getAll: function(req, res) {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  bynameall: function(req, res) {
+    db.Staff.find(req.query)
+    .sort({name: 1})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     console.log("req.body")
     console.log(req.body)

@@ -1,11 +1,13 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
+// import CssBaseline from '@material-ui/core/CssBaseline';
+// import Grid from '@material-ui/core/Grid';
+// import {Link} from 'react-router-dom';
 // import Container from '@material-ui/core/Container';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
+// import GitHubIcon from '@material-ui/icons/GitHub';
+// import FacebookIcon from '@material-ui/icons/Facebook';
+// import TwitterIcon from '@material-ui/icons/Twitter';
+import ContactUs from './ContactUs'
 // import Header from '../../components/Material-ui/Header';
 import MainFeaturedPost from '../layout/MainFeaturedPost';
 import FeaturedPost from '../layout/FeaturedPost';
@@ -21,9 +23,12 @@ import Dbparagraph from '../layout/Dbparagraph'
 import MainIMG from '../../Images/oceanHealthcare.jpg'
 import whoweareIMG from '../../Images/mWeissman.jpg'
 import locationsIMG from '../../Images/mainIMG.jpg'
-// import {
-//   Button,
-// } from "@material-ui/core";
+import {
+  Grid,
+  CssBaseline,
+  Typography,
+  Link
+} from "@material-ui/core";
 // import Cookies from 'js-cookie';
 
 // const jwtDecode = require('jwt-decode');
@@ -39,6 +44,22 @@ const useStyles = makeStyles(theme => ({
       sidebarSection: {
         marginTop: theme.spacing(3),
       },
+      // h1theme: {
+      //   color: theme.palette.secondary.dark,
+      //   paddingLeft: 40,
+      //   margin: 20,
+      //   marginTop: 40,
+      //   textAlign: 'center',
+      //   padding: 10,
+      //   [theme.breakpoints.down('md')]: {
+      //     fontSize: 50,
+      //   }
+      // },
+      // secondaryheader: {
+      //   textAlign: 'center',
+        
+      // }
+
 }));
 
 // const sections = [
@@ -171,6 +192,20 @@ export default function AboutPage(props) {
             ))}
           </Grid>
           <Dbparagraph catagory={"edithome"}/>
+          {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
+  Contact Us
+</Typography>
+<Typography variant="h2" component="h2" className={classes.secondaryheader}>
+
+ <Link target="_blank" 
+                rel="noopener noreferrer" 
+                href="https://hushforms.com/contactcpc"
+                underline="always"
+                >
+        Click this link to contact us 
+      </Link>
+</Typography> */}
+          {/* <ContactUs /> */}
           {/* <Grid container spacing={5} className={classes.mainGrid}> */}
             {/* <Main title={"Welcome"} tab={"/aboutus"} />  */}
             {/* {props.selectedDashboard === "about" && <About />} */}

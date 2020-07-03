@@ -87,6 +87,7 @@ h1theme: {
     const [mybody1D, setmybody1D] = useState("");
     const [mybody2D, setmybody2D] = useState("");
     const [mySwitch, setmySwitch] = useState("");
+    const [myFAQS, setmyFAQs] = useState(false);
     // modal
     const [open, setOpen] = useState(false);
     async function handleOpen() {
@@ -123,7 +124,8 @@ h1theme: {
              heading: myHeadingD,
              body1: mybody1D,
              body2: mybody2D,
-             catagory: props.catagory
+             catagory: props.catagory,
+             display: myFAQS,
             //  rating: myratingU,
              // link: mylink
              })
@@ -137,6 +139,7 @@ h1theme: {
              heading: myHeadingD,
              body1: mybody1D,
              body2: mybody2D,
+             display: myFAQS,
             //  rating: myratingU,
              // link: mylink
              })
@@ -153,6 +156,13 @@ h1theme: {
             .then(res => alert("deleting"))
           .catch(err => console.log(err))
           };
+          function toggleDisplay() {
+            if(myFAQS === true){
+              setmyFAQs(false)
+            }else{
+              setmyFAQs(true)
+            }
+          }
     // useEffect(() => {
     //     randomtext()
     //   }, [])
@@ -210,6 +220,16 @@ h1theme: {
      <div className={classes.modalPaper}>
  
       <div><h2>Add Text</h2></div>
+      <TextField
+          label="Display on FAQ's page"
+          id="margin-none"
+        
+          className={classes.textField}
+          value={myFAQS}
+          // onChange={(e)=> setmyHeadingD(e.target.value)}
+          helperText="If True this post will display in FAQ's page"
+        />
+      <Button variant="contained" onClick={()=> toggleDisplay()}>Click to display in FAQ's</Button>
       <TextField
           label="Heading"
           id="margin-none"

@@ -43,8 +43,11 @@ const useStyles = makeStyles((theme) => ({
 return(
     <div className={classes.root}>
     <Typography variant="h1" component="h2" className={classes.h1theme}>
-  Thank you for making a payment, please check your email for reciept.
+  Thank you for making a payment, please check your email for reciept,  the charge will appear as CPC Account Payment on your credit card statement.
 </Typography>
+{/* <Typography variant="h1" component="h2" className={classes.h1theme}>
+  Thank you for making a payment, please check your email for reciept.
+</Typography> */}
 </div>
 )
 

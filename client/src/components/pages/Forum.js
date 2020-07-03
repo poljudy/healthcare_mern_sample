@@ -128,7 +128,10 @@ const Forum = props =>{
 // function redirectHome () {
 //   // Redirect to={'/home'} 
 // }
-
+// let mydata =  sdata.filter(function (sdata){
+//     return sdata.display === true;
+//   })
+  
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -279,9 +282,11 @@ Welcome {user.name}
   alignContent="space-around"
 >
 
-{mydata && mydata.map(dataR => (
+{mydata && mydata.filter(tdata => tdata.display === true).map(dataR => (
   <Grid item xs={12} m={12} id={dataR._id} key={dataR._id}>
   <Paper className={classes.paper}>
+{/* ))}
+{mydata && mydata.map(dataR => ( */}
     <Card
 //    dataR.img
 className={classes.border}

@@ -119,28 +119,36 @@ const useStyles = makeStyles(theme => ({
     // backgroundRepeat: 'no-repeat',
     // backgroundPosition: '50%',
     },
+    logoDiv: {
+      alignSelf: "center"
+    },
     logoHorizontallyCenter: {
       objectFit: 'contain',
       // alignSelf: 'center'
       margin: 2,
       padding:2,
-      marginBottom: 5,
+      // marginBottom: 5,
       // marginBottom: 0,
       // paddingBottom: 0,
       // marginRight: 30,
        width: '50%',
-       maxWidth: 400
+       maxWidth: 400,
+      //  position: 'absolute', 
+       left: '50%', 
+       top: '50%',
+       transform: 'translate(-50%, 3%)'
   ,    // height: 150,
+
       position: 'relative', 
-      left: '37.5%', 
-      [theme.breakpoints.down('md')]: {
-      left: '10%',
-      width: 'auto'
-    },
-    [theme.breakpoints.down('sm')]: {
-      left: '2%',
-      width: 'auto'
-    }
+      // left: '37.5%', 
+      // [theme.breakpoints.down('md')]: {
+      // left: '10%',
+    //   width: 'auto'
+    // },
+    // [theme.breakpoints.down('sm')]: {
+    //   left: '2%',
+    //   width: 'auto'
+    // }
     },
     iconstyle: {
       color: theme.palette.primary.dark,
@@ -419,7 +427,24 @@ const menuId = "primary-search-account-menu";
       />
     </Card> */}
 {/* // </Link> */}
-<div className={classes.logoHorizontallyCenter}>
+
+
+
+
+
+
+
+
+
+
+<div className={classes.logoHorizontallyCenter}
+  // style={{
+  //       position: 'absolute', 
+  //       left: '50%', 
+  //       top: '50%',
+  //       transform: 'translate(-50%, -50%)'
+  //   }}
+>
      <Link to={"/home"} >
 {/* <Avatar variant="square" alt="Churchland Psychological Center" src={logo} className={classes.logo}/> */}
          <img src={logo} alt="Churchland Psychological Center" className={classes.logo}></img>
@@ -428,6 +453,7 @@ const menuId = "primary-search-account-menu";
           </Typography> */}
           </Link>
           </div>
+        
           {/* <Link to={"/home"}>
 <Avatar alt="Remy Sharp" src={logo} className={classes.large}/>
 </Link> */}

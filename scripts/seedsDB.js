@@ -15,6 +15,7 @@ const staffSeed = [
     hours: 'Churchland and Norfolk offices.',
     img: '../../Images/mWeissman.jpg',
     rating: 100,
+    therapist: true,
     date: new Date(Date.now()) 
 },
 {
@@ -26,6 +27,7 @@ const staffSeed = [
     hours: 'Churchland office',
     img: '../../Images/bForbes.jpg',
     rating: 99,
+    therapist: true,
     date: new Date(Date.now())
 },
 {
@@ -36,6 +38,7 @@ const staffSeed = [
     other: 'Virginia Consortium for Professional Psychology, PsyD (1995)',
     img: '../../Images/jAlperin2.jpg',
     rating: 98,
+    therapist: true,
     date: new Date(Date.now())
   },
 {
@@ -47,6 +50,7 @@ const staffSeed = [
     hours: 'Great Bridge, Wed., 8 AM – 6 PM; Thu., 8 AM – 7 PM',
     img: '../../Images/tScott.png',
     rating: 97,
+    therapist: true,
     date: new Date(Date.now())
   },
 {
@@ -57,6 +61,7 @@ const staffSeed = [
     other: 'Churchland Office, Tue., Thu., 9 AM – 5 PM.',
     hours: 'Norfolk Office, Mon., Wed. 8 AM – 1 PM.',
     date: new Date(Date.now()),
+    therapist: true,
     rating: 96,
     img: '../../Images/sLitt2.jpg'
   },
@@ -68,6 +73,7 @@ const staffSeed = [
     other: 'Accepts most insurances and employee assistance programs.', 
     hours: 'Churchland, Thursdays and Fridays.',
     date: new Date(Date.now()),
+    therapist: true,
     rating: 95,
     img: '../../Images/cSmithson.png'
   },
@@ -79,6 +85,7 @@ const staffSeed = [
     other: 'Member, National Association of Social Workers, Academy of Certified Social Workers, and Psi Chi.', 
     hours: 'Churchland; flexible hours per client need.',
     rating: 94,
+    therapist: true,
     img: '../../Images/sAsprey.jpg',
     date: new Date(Date.now())
   },
@@ -89,6 +96,7 @@ const staffSeed = [
     education: 'Southern Illinois University, PhD',
     img: '../../Images/fGripka.jpg',
     rating: 94,
+    therapist: true,
     date: new Date(Date.now())
   },
   {
@@ -107,6 +115,7 @@ const staffSeed = [
     education: 'Villanova University, MS in Counseling; Philadelphia Child Guidance Clinic, post-graduate work in Marriage and Family Therapy',
     other: 'Her recently published book, When the Walls Come Tumbling Down, guides families through the divorce process. Marital Therapy. Treats children and female adolescents experiencing high anxiety and developmental problems. Proficient in using Cognitive-Behavioral Therapy with patients suffering from anxiety and depression.', 
     img: '../../Images/mRicker.jpg',
+    therapist: true,
     rating: 92,
     date: new Date(Date.now())
   },
@@ -117,6 +126,7 @@ const staffSeed = [
     education: 'Pennsylvania State University, BS, 1970; University of Texas, PhD, 1977; University of Texas Medical Branch, Fellowship in Family Therapy, 1978',
     other: 'National Register of Health Service Psychologists, Member; International Society for the Study of Trauma and Dissociation, Past President; Author: 2 books and 75 articles.', 
     hours: 'Norfolk office',
+    therapist: true,
     img: '../../Images/pDell.jpg',
     rating: 91,
     date: new Date(Date.now())
@@ -129,6 +139,7 @@ const staffSeed = [
     hours: 'Day and evening appointments available as well as Saturday appointments',
     img: '../../Images/keeleyd.jpg',
     rating: 90,
+    therapist: true,
     date: new Date(Date.now())
   },
   {
@@ -139,6 +150,7 @@ const staffSeed = [
     other: 'License: State of Virginia licensed clinical psychologist I bring years of wide-ranging experience to work with my clients. I have worked in inpatient and outpatient settings with a variety of clients over the years. I have been a consultant and workshop presenter. I have taught college-level courses and I am a published author. My private practice focuses on therapy with adultsand couples. I believe every client and his or her situation is unique. I do not believe in a one-size-fits-all approach to therapy. I use EMDR, cognitive-behavioral, solution-oriented, or other approaches as they fit clients’ needs. I also use plain old common sense and humor in liberal doses. I consider therapy a joint effort, a partnership, a “We’re working on this together” experience.', 
     img: '../../Images/mSullivan.jpg',
     rating: 89,
+    therapist: true,
     date: new Date(Date.now())
   },
   {
@@ -148,6 +160,7 @@ const staffSeed = [
     education: 'Dr. Raleigh Phillips attended Davidson College majoring in Psychology and Sociology.  After traveling in Europe and Asia for a year, he returned to work with inner city adolescents while studying Special Education, M.Ed. at the University of Georgia.  Doctoral Studies in Clinical Psychology followed at The Illinois School of Professional Psychology, earning a Psy. D., learning with professors from Northwestern and The University of Chicago. He has been in practice for 29 years with Riverpoint Psychiatric Associates in Norfolk..  Dr. Phillips is very happy to join his former “professor” and colleague, Dr. Michael Weissman, Ph. D. at Churchland Psychological Center.',
     hours: 'Norfolk office; Monday through Thursday, 8:00 AM to 4 PM',
     img: '../../Images/rPhillips.jpg',
+    therapist: true,
     rating: 88,
     date: new Date(Date.now())
   },
@@ -158,6 +171,7 @@ const staffSeed = [
     education: 'My goal is to provide a warm, caring, and non-judgmental atmosphere where clients and I work in partnership to pursue positive growth and lifelong change. My approach to treatment is based primarily in cognitive behavioral therapy, however, I draw from a variety of schools of therapy according to what works best for each client. I don’t believe we can do this life well and fulfill our full potential without taking some time to examine our thought life and emotional health. I’ve experienced firsthand the gifts of therapy and I love nothing more than seeing others gain freedom, peace and connection through counseling and mental health care. improve their lives through counseling and mental health care.',
     hours: 'Churchland office; Tuesday evenings, with additional days and times to be announced.',
     img: '../../Images/lPace.png',
+    therapist: true,
     rating: 87,
     date: new Date(Date.now())
   },
@@ -168,6 +182,7 @@ const staffSeed = [
     hours: 'Churchland and telehealth; flexible hours per client need.',
     img: '../../Images/rBuck.png',
     rating: 86,
+    therapist: true,
     date: new Date(Date.now())
   },
   {
@@ -176,6 +191,7 @@ const staffSeed = [
     specialties: 'Treatment Orientation: Coaching, Cognitive Behavioral (CBT), Solution Focused Brief therapy (SFBT)',
     education: 'Hi, I’m Jennifer Hart, LCSW. Throughout my career I have had the opportunity to work in both inpatient and outpatient settings. I also have a medical social work background so I understand the importance of managing both our physical and mental health. For the most part, I have experience working with adolescents and adults. My goal is to help you better understand yourself and to provide you with the tools necessary to cope with life struggles. The most important thing I am reminded of everyday as a helping professional is that we were not meant to be alone. I want to help build on your strengths using a person-centered approach through the therapeutic process.',
     img: '../../Images/jHart.jpg',
+    therapist: true,
     rating: 85,
     date: new Date(Date.now())
   },
@@ -187,6 +203,7 @@ const staffSeed = [
   other: ' I practice primarily in Cognitive Behavioral Therapy and Trauma-Focus Model/Family Systems Theory; however, also drawing from a variety of schools of therapy.  Psychodynamic, Narrative Therapy, Psychoeducation/Group therapy, Supportive Therapy, and Brief Therapy in the context of applying Critical Thinking (CT) Skills to the planned change process.  ', 
   hours: 'Adults 18+; Young adults exiting the foster care system; and some adolescents under special circumstances.',
     img: '../../Images/mJohnson.png',
+    therapist: true,
     rating: 84,
     date: new Date(Date.now())
   },
@@ -194,7 +211,7 @@ const staffSeed = [
     name: "Crystal Harris",
     title: "LCSW",
     specialties: 'Social Work',
-    // education: 'Hi, I’m ...',
+    therapist: true,
     img: '../../Images/cHarris.jpg',
     rating: 83,
     date: new Date(Date.now())
@@ -203,13 +220,15 @@ const staffSeed = [
   name: "Julie VanGosen",
   title: "Office Manager",
   rating: 82,
+  therapist: false,
   img: '../../Images/jVanGosen.jpg',
   date: new Date(Date.now())
 },
 {
-  name: "jVanGosen",
+  name: "Janet Meyers",
   title: "Assistant Office Manager",
   rating: 81,
+  therapist: false,
   img: '../../Images/jMyers.jpg',
   date: new Date(Date.now())
 },
@@ -220,6 +239,7 @@ const staffSeed = [
   // education: '',
   // other: '', 
   // hours: '',
+  therapist: false,
   rating: 80,
   img: '../../Images/cOwens.jpg',
   date: new Date(Date.now())
@@ -307,6 +327,7 @@ const resourcesSeed = [
     body1:
       "Please call the main business office at 757-483-3404 and our office staff will take your information and help match you to the appropriate therapist. All of our therapists manage their own schedules, so the therapist will contact you directly to schedule your first appointment.",
       rating: 4,
+      display: true,
     date: new Date(Date.now())
   },
   {
@@ -315,6 +336,7 @@ const resourcesSeed = [
     body1:
       "We accept most insurance plans including Anthem Blue Cross Blue Shield, Tricare, Optima, and United Behavioral among many others.",
       rating: 3,
+      display: true,
     date: new Date(Date.now())
   },
   {
@@ -323,6 +345,7 @@ const resourcesSeed = [
     body1:
       "Most of our clients use insurance to cover the cost of therapy, and the cost will vary depending on your particular plan. You can contact your insurance company to inquire about your benefits, copayments, and deductible",
       rating: 2,
+      display: true,
     date: new Date(Date.now())
   },
     {
@@ -331,6 +354,7 @@ const resourcesSeed = [
     body1:
       "No, we don’t have a psychiatrist on staff and do not offer this service. If your therapist feels that medication might be warranted then an appropriate referral will be made.",
       rating: 1,
+      display: true,
     date: new Date(Date.now())
   },
   {
@@ -343,6 +367,7 @@ const resourcesSeed = [
   {
     catagory: "editform",
     heading: "Form Submition",
+    display: false,
     body1:  "Please click on the appropriate link below and the forms will be sent to you within one business day."
   }
 ];
