@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 
 import AuthContext from '../../context/auth/authContext';
 import Axios from "axios";
@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 40,
     padding: 5,
     border: 1,
+    imageOrientation: "unset",
     // style: { width: '5rem', height: '5rem' },
     borderColor:theme.palette.primary.dark,
   backgroundSize: 'contain'
@@ -101,6 +102,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Card2 = (props) => {
 
+  // async function CheckImgDirection(img) {
+// if(img.)
+    // setmyimg(img)
+  // }
+  // }
   // if(backgroundId === i){
   //   classes
   // }
@@ -125,6 +131,7 @@ const [myID, setMyID] = React.useState(null)
       setmysubtitleU(props.subtitle)
     }
     if(props.img){
+      // CheckImgDirection(props.img)
       setmyimg(props.img)
     }
     if(props.body1){

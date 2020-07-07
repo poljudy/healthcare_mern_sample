@@ -8,11 +8,15 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-// import {Link} from "react-router-dom"
+import ALink from '@material-ui/core/Link';
+import {Link} from "react-router-dom"
 import Paper from '@material-ui/core/Paper';
 import Dbparagraph from '../layout/Dbparagraph'
 import FormsIMG from '../../Images/formsIMG.png'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,6 +55,14 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 25,
     }
   },
+  List: {
+    width: '100%',
+    maxWidth: 360,
+    backgroundColor: theme.palette.background.paper,
+    marginLeft: '25%',
+    marginRight: '25%',
+    // display: "block"
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -72,7 +84,7 @@ const Forms = () => {
 </Typography>
 
 {/* <Typography variant="subtitle2" component="h2" className={classes.h2theme}>
-  For Hipaa compliency, please click the link below to send us a short message with what forms you need and we will send you the link with the forms via email. 
+  For Hipaa compliency, please click the ALink below to send us a short message with what forms you need and we will send you the ALink with the forms via email. 
 </Typography> */}
 <Dbparagraph catagory={"editform"}/>
 
@@ -83,7 +95,7 @@ const Forms = () => {
   alignItems="center"
 >
  <Paper className={classes.paper}>
- <Link    target="_blank" 
+ <ALink    target="_blank" 
                 rel="noopener noreferrer" className={classes.footerTheme}
                 href="https://hushforms.com/contactcpc">
     <Card className={classes.root}>
@@ -104,7 +116,7 @@ const Forms = () => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button type="link" size="small" color="primary" 
+        <Button type="ALink" size="small" color="primary" 
                 target="_blank" 
                 rel="noopener noreferrer" className={classes.footerTheme}
                 href="https://hushforms.com/contactcpc">
@@ -115,12 +127,12 @@ const Forms = () => {
         </Button> */}
       </CardActions>
     </Card>
-    </Link>
+    </ALink>
     </Paper>
     {/* // 2nd */}
     {/* > */}
  <Paper className={classes.paper}>
- <Link    target="_blank" 
+ <ALink    target="_blank" 
                 rel="noopener noreferrer" className={classes.footerTheme}
                 href="https://hushforms.com/contactcpc">
     <Card className={classes.root}>
@@ -150,8 +162,43 @@ const Forms = () => {
         </Button> */}
       </CardActions>
     </Card>
-    </Link>
+    </ALink>
     </Paper>
+    {/* <br /> */}
+    {/* <br /> */}
+    </Grid>
+<div>
+    <Typography variant="subtitle2" component="h2" className={classes.h2theme}>
+Or Download Below
+</Typography>
+
+<List className={classes.List}>
+<ListItem>
+<Link to="../../Forms/NewPatientForm1.docx" target="_blank" download>New Patient Form 1</Link>
+</ListItem>
+<ListItem>
+<Link to="../../Forms/Newptagreement2.docx" target="_blank" download>New Patient Form 2</Link>
+</ListItem>
+<ListItem>
+<Link to="../../Forms/RELEAS2121312.doc" target="_blank" download>Main Release Form</Link>
+  </ListItem>
+  <ListItem>
+<Link to="../../Forms/PCPRFORM.WPD" target="_blank" download>Release of Inofrmation 2</Link>
+  
+</ListItem>
+<ListItem>
+<Link to="../../Forms/TELETHERAPYINFORMEDCONSENT.doc" target="_blank" download>Teletherapy Release Form</Link>
+  </ListItem>
+</List>
+</div>
+{/* // </Typography> */}
+
+    
+    
+    
+   
+
+
   {/* 3rd */}
   {/* <Paper className={classes.paper}>
 <Card className={classes.root}>
@@ -176,7 +223,7 @@ const Forms = () => {
 </CardActions>
 </Card>
 </Paper> */}
-</Grid>
+
 </>
   );
 }
