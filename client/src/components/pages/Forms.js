@@ -179,11 +179,11 @@ Or Download Below
 <ListItem>
 <Link to="../../Forms/Newptagreement2.docx" target="_blank" download>New Patient Form 2</Link>
 </ListItem>
-<ListItem>
-<Link to="../../Forms/RELEAS2121312.doc" target="_blank" download>Main Release Form</Link>
-  </ListItem>
+{/* <ListItem>
+<Link to="../../Forms/RELEAS2121312.doc" target="_blank" download>Secondary Release Form</Link>
+  </ListItem> */}
   <ListItem>
-<Link to="../../Forms/PCPRFORM.WPD" target="_blank" download>Release of Inofrmation 2</Link>
+<Link to="../../Forms/mianReleaseForm.doc" target="_blank" download>Release of Information</Link>
   
 </ListItem>
 <ListItem>
