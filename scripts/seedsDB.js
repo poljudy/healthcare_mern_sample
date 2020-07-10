@@ -131,17 +131,17 @@ const staffSeed = [
     rating: 91,
     date: new Date(Date.now())
   },
-  {
-    name: "Denise Keeley",
-    title: "LCSW",
-    specialties: 'Individual and family therapy for adult and young adults. I am a clinical social worker with a medical background. I provide psychotherapy for those with depression, anxiety and medical illnesses. I have experience working with transgender clients including providing psychotherapy, providing written documentation for those seeking referrals to medical doctors for hormone therapy and for those pursuing surgical transition.',
-    education: 'Norfolk State University; Old Dominion University; Member of National Association of Social Workers',
-    hours: 'Day and evening appointments available as well as Saturday appointments',
-    img: '../../Images/deniseKeeley.jpg',
-    rating: 90,
-    therapist: true,
-    date: new Date(Date.now())
-  },
+  // {
+  //   name: "Denise Keeley",
+  //   title: "LCSW",
+  //   specialties: 'Individual and family therapy for adult and young adults. I am a clinical social worker with a medical background. I provide psychotherapy for those with depression, anxiety and medical illnesses. I have experience working with transgender clients including providing psychotherapy, providing written documentation for those seeking referrals to medical doctors for hormone therapy and for those pursuing surgical transition.',
+  //   education: 'Norfolk State University; Old Dominion University; Member of National Association of Social Workers',
+  //   hours: 'Day and evening appointments available as well as Saturday appointments',
+  //   img: '../../Images/deniseKeeley.jpg',
+  //   rating: 90,
+  //   therapist: true,
+  //   date: new Date(Date.now())
+  // },
   {
     name: "Michael Sullivan",
     title: "Ph.D.",
