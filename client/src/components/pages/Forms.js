@@ -169,7 +169,7 @@ const Forms = () => {
     </Grid>
 <div>
     <Typography variant="subtitle2" component="h2" className={classes.h2theme}>
-Or Download Below
+    or download the forms below to print and bring into your first session
 </Typography>
 
 <List className={classes.List}>
