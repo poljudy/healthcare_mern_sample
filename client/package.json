@@ -7,7 +7,7 @@
     "@material-ui/icons": "^4.9.1",
     "@stripe/react-stripe-js": "^1.1.2",
     "@stripe/stripe-js": "^1.7.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "axios-hooks": "^1.11.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
