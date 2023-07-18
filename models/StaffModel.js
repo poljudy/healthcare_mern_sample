@@ -2,8 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const staffSchema = new Schema({
-  name: { type: String, required: true },
-  title: { type: String },
+  name: { 
+    type: String, 
+    required: true 
+  },
+  title: { 
+    type: String 
+  },
   specialties: String,
   education: String,
   other: String,
@@ -11,11 +16,16 @@ const staffSchema = new Schema({
   img: String,
   link: String,
   rating: Number,
-  therapist: {type: Boolean, default: true},
-  date: { type: Date, default: Date.now }
+  therapist: {
+    type: Boolean, 
+    default: true
+  },
+  date: { 
+    type: Date, 
+    default: Date.now 
+  }
 });
 
 const Staff = mongoose.model("staff", staffSchema);
-// staff?
 
 module.exports = Staff;
