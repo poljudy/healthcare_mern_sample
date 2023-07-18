@@ -2,11 +2,9 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-// const config = require('config');
 const auth = require('../middleware/auth');
 const {check, validationResult} = require('express-validator');
 
-// const User = require('../models/User');
 const db = require('../models');
 // @route     GET api/auth
 // @desc      Get logged in user
@@ -57,7 +55,6 @@ router.post(
           role: user.role
         },
       };
-// add name and role above?
       jwt.sign(
         payload,
         // config.get('jwtSecret'),

@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-// const config = require('config');
 const {check, validationResult} = require('express-validator');
 
 const User = require('../models/User');
@@ -38,14 +37,12 @@ router.post(
         return res.status(400).json({msg: 'User already exists'});
       }
 
-      // user = new User({
         user= new db.User({
         name,
         email,
         password,
         role
       });
-// add role?
       const salt = await bcrypt.genSalt(10);
 
       user.password = await bcrypt.hash(password, salt);
@@ -62,7 +59,6 @@ router.post(
 
       jwt.sign(
         payload,
-        // config.get('jwtSecret'),
         process.env.jwtSecret,
         {
           expiresIn: 360000,
