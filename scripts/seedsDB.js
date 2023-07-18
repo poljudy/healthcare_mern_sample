@@ -235,10 +235,6 @@ const staffSeed = [
 {
   name: "Courtney Owens",
   title: "Receptionist",
-  // specialties: '',
-  // education: '',
-  // other: '', 
-  // hours: '',
   therapist: false,
   rating: 80,
   img: '../../Images/cOwens.jpg',
@@ -246,81 +242,8 @@ const staffSeed = [
 },
 
 ]
-// {
-//   name: "",
-//   title: "",
-//   specialties: '',
-//   education: '',
-//   other: '', 
-//   hours: '',
-// rating: 79,
-//   img: '../../Images/sAsprey.jpg',
-//   date: new Date(Date.now())
-// },
+
 const resourcesSeed = [
-  // {
-  //   catagory: "about",
-  //   heading: "About Us",
-  //   subtitle: "from the creator of GraphicKnowvel",
-  //   body1:
-  //     "We are a Philadelphia based company serving the needs of small businesses in need of a little cash.",
-  //     body2:
-  //     "View our values and mission statment to learn more.",
-  //     rating: 4,
-  //     date: new Date(Date.now())
-  // },
-  // {
-  //   catagory: "howitWorks",
-  //   heading: "What are your hours?",
-  //   body1:
-  //     "Each of our therapists has their own hours, please check their bio on the staff page for more information. The business office is open M-F 9am to 5pm. If you are experiencing a clinical emergency and cannot reach your therapist, please call the answering service at 757-671-3152 to be connected with the therapist on call.",
-  //     rating: 2,
-  //   date: new Date(Date.now())
-  // },
-  // {
-  //   catagory: "privacypolicy",
-  //   heading: "The Dead Zone",
-  //   body1:
-  //       "Please reproduce and share!",
-  //     body2:
-  //     "See terms of use",
-  //     rating: 1,
-  //           date: new Date(Date.now())
-  // },
-  // {
-  //   catagory: "termsofuse",
-  //   heading: "Terms of Use",
-  //   body1:
-  //     "Terms of use the sale of this product is not limited in any way.",
-  //     body2:
-  //     "No Copyright as of yet.",
-  //     rating: 1,
-  //     date: new Date(Date.now())
-  // },
-  // {
-  //   catagory: "missionstatement",
-  //   heading: "Mission Statement",
-  //   body1:
-  //     "Partnering with small businesses to help them grow by providing honest, transparent, and consultive funding solutions tailored to the individual needs of each business.",
-  //     rating: 3,
-  //     date: new Date(Date.now())
-  // },
-  // {
-  //   catagory: "values",
-  //   heading: "Core Values",
-  //   body1:
-  //     "Be Honest and Transparent, Understand Each Client's Unique Needs, Look Out For Client's Best Interest, Client Success Is our Sucess, and Believe In Each And Every patient.",
-  //     rating: 4,
-  //     date: new Date(Date.now())
-  // },
-  // {
-  //   catagory: "faq",
-  //   heading: "Does an application cost money?",
-  //   body1:
-  //     "No! It will always be free",
-  //     rating: 3,
-  //   date: new Date(Date.now())
-  // },
   {
     catagory: "schedule",
     heading: "How do I schedule an appointment?",
