@@ -1,7 +1,5 @@
 const router = require("express").Router();
 const resourceController = require("../controllers/resourcesController");
-// const jwt = require("jsonwebtoken");
-// const jwtVerify = require("../../config/jwt");
 const auth = require('../middleware/auth');
 
 router.route("/all").get(resourceController.getAll);
