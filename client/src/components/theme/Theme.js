@@ -1,12 +1,12 @@
-import { createMuiTheme }  from '@material-ui/core/styles'
-import RalewayWoff2 from '../../Fonts/Raleway-Regular.ttf';
-import AmperzandWoff2 from '../../Fonts/Amperzand.ttf';
-import opensansWoff2 from '../../Fonts/OpenSans-Regular.ttf'
+import { createMuiTheme } from "@material-ui/core/styles";
+import RalewayWoff2 from "../../Fonts/Raleway-Regular.ttf";
+import AmperzandWoff2 from "../../Fonts/Amperzand.ttf";
+import opensansWoff2 from "../../Fonts/OpenSans-Regular.ttf";
 
 const opensans = {
-  fontFamily: 'Opensans',
-  fontStyle: 'normal',
-  fontDisplay: 'swap',
+  fontFamily: "Opensans",
+  fontStyle: "normal",
+  fontDisplay: "swap",
   fontWeight: 400,
   src: `
     local('Opensans'),
@@ -14,48 +14,45 @@ const opensans = {
     url(${opensansWoff2}) format('ttf')
   `,
   unicodeRange:
-    'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
+    "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
 };
 
 const raleway = {
-    fontFamily: 'Raleway',
-    fontStyle: 'normal',
-    fontDisplay: 'swap',
-    fontWeight: 400,
-    src: `
+  fontFamily: "Raleway",
+  fontStyle: "normal",
+  fontDisplay: "swap",
+  fontWeight: 400,
+  src: `
       local('Raleway'),
       local('Raleway-Regular'),
       url(${RalewayWoff2}) format('ttf')
     `,
-    unicodeRange:
-      'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
-  };
-  const amperzand = {
-    fontFamily: 'Amperzand',
-    fontStyle: 'normal',
-    fontDisplay: 'swap',
-    fontWeight: 400,
-    src: `
+  unicodeRange:
+    "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
+};
+const amperzand = {
+  fontFamily: "Amperzand",
+  fontStyle: "normal",
+  fontDisplay: "swap",
+  fontWeight: 400,
+  src: `
       local('Amperzand'),
       local('Amperzand-Regular'),
       url(${AmperzandWoff2}) format('ttf')
     `,
-    unicodeRange:
-      'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF',
-  };
-
+  unicodeRange:
+    "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF",
+};
 
 const theme = createMuiTheme({
   palette: {
-    primary: { 
-      main: '#008292',
-      dark: '#abdee4',
-      
+    primary: {
+      main: "#008292",
+      dark: "#abdee4",
     },
     secondary: {
-      main: '#ecd4c8',
-      dark:'#828789',
-      
+      main: "#ecd4c8",
+      dark: "#828789",
     },
     // status: {
     //   Error: '#008292',
@@ -63,51 +60,46 @@ const theme = createMuiTheme({
     //   info: '#ecd4c8',
     //   success: '#828789'
     // }
-},
+  },
   typography: {
-    h1:{
-      fontFamily: 'Amperzand, Arial',
+    h1: {
+      fontFamily: "Amperzand, Arial",
       fontSize: 80,
       // [theme.breakpoints.up("md")]: {
       //   fontSize: 50
       // }
-      
     },
     h2: {
-      fontFamily: 'Raleway'
+      fontFamily: "Raleway",
     },
     h3: {
-      fontFamily: 'Whitney'
+      fontFamily: "Whitney",
     },
-    h4: {
-
-    },
+    h4: {},
     h5: {
-      fontFamily: 'Raleway, Arial',
+      fontFamily: "Raleway, Arial",
       fontSize: 26,
     },
     h6: {
-      fontFamily: 'Raleway, Arial',
+      fontFamily: "Raleway, Arial",
       fontSize: 24,
     },
     subtitle1: {
-      fontFamily: 'Amperzand, Arial',
-      fontSize: 40
+      fontFamily: "Amperzand, Arial",
+      fontSize: 40,
     },
     subtitle2: {
-      fontFamily: 'Raleway, Arial',
-      fontSize: 40
+      fontFamily: "Raleway, Arial",
+      fontSize: 40,
     },
     body1: {
-      fontFamily: 'Raleway, Arial',
-      fontSize: 20
+      fontFamily: "Raleway, Arial",
+      fontSize: 20,
     },
     body2: {
-      fontFamily: 'Opensans, Arial',
+      fontFamily: "Opensans, Arial",
       fontSize: 22,
     },
-  
-
   },
   breakpoints: {
     values: {
@@ -127,18 +119,18 @@ const theme = createMuiTheme({
   //     },
   //   },
   // },
-//   subtitle1: {
-//     fontSize: 12,
-//   },
-//   body1: {
-//     fontWeight: 500,
-//   },
-//   button: {
-//     fontStyle: 'italic',
-//   },
-//   typography: {
-//       fontFamily: 'raleway'
-//   }
-})
+  //   subtitle1: {
+  //     fontSize: 12,
+  //   },
+  //   body1: {
+  //     fontWeight: 500,
+  //   },
+  //   button: {
+  //     fontStyle: 'italic',
+  //   },
+  //   typography: {
+  //       fontFamily: 'raleway'
+  //   }
+});
 
-export default theme
+export default theme;
