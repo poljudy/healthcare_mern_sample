@@ -167,11 +167,7 @@ const Navbar = (props) => {
           Home
         </Link>
       </MenuItem>
-      {/* <MenuItem onClick={handleMenuClose}>
-        <Link to={"/marketplace"}>Marketplace</Link>
-      </MenuItem> */}
 
-      {/* <MenuItem onClick={handleClose}><Link to={"/blog"}>Blog</Link></MenuItem> */}
       <MenuItem onClick={handleMenuClose}>
         <Link to={"/userprofile"}>Profile </Link>
       </MenuItem>
@@ -179,19 +175,12 @@ const Navbar = (props) => {
         <Link to={"/more"}>More </Link>
       </MenuItem>
       <MenuItem onClick={handleMenuClose}>
-        {/* {!loggedIn ? true : ( */}
         <Link to={"/signin"}>Sign In</Link>
-        {/* )}   */}
 
         <a href="/" onClick={logout}>
           Logout
         </a>
       </MenuItem>
-      {/* <MenuItem onClick={handleMenuClose}>
-        <a href="/" onClick={logout}>
-          Logout
-        </a>
-      </MenuItem> */}
     </Menu>
   );
 
@@ -206,19 +195,11 @@ const Navbar = (props) => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      {/* <MenuItem onClick={handleMobileMenuClose}><Link to={"/home"}>Home</Link></MenuItem> */}
-      {/* <MenuItem onClick={handleMobileMenuClose}><Link to={"/userprofile"}>Profile  </Link></MenuItem> */}
-      {/* <MenuItem onClick={handleClose}><Link to={"/blog"}>Blog</Link></MenuItem> */}
-      {/* <MenuItem onClick={handleMobileMenuClose}><Link to={"/gamepage"}>Games</Link></MenuItem> */}
-      {/* <MenuItem onClick={handleMobileMenuClose}><Link to={"/more"}>Features</Link></MenuItem> */}
-      {/* <MenuItem onClick={handleMobileMenuClose}><a href="/" onClick={logout}>Logout</a></MenuItem> */}
-
       <Link to={"/home"}>
         <MenuItem>
           <IconButton aria-label="Home" color="inherit">
-            {/* <Logo /> */}
             <HomeIcon />
-          </IconButton>{" "}
+          </IconButton>
           <p>Home</p>
         </MenuItem>
       </Link>
@@ -226,7 +207,6 @@ const Navbar = (props) => {
       <Link to={"/staff"}>
         <MenuItem>
           <IconButton aria-label="Staff" color="inherit">
-            {/* <Logo /> */}
             <GroupIcon />
           </IconButton>
           <p>Therapists</p>
@@ -236,7 +216,6 @@ const Navbar = (props) => {
       <Link to={"/locations"}>
         <MenuItem>
           <IconButton aria-label="locations" color="inherit">
-            {/* <Logo /> */}
             <LocationOnIcon />
           </IconButton>
           <p>Locations</p>
@@ -246,7 +225,6 @@ const Navbar = (props) => {
       <Link to={"/forms"}>
         <MenuItem>
           <IconButton aria-label="Forms" color="inherit">
-            {/* <Logo /> */}
             <NoteAddIcon />
           </IconButton>
           <p>Forms</p>
@@ -256,7 +234,6 @@ const Navbar = (props) => {
       <Link to={"/forum"}>
         <MenuItem>
           <IconButton aria-label="Forum" color="inherit">
-            {/* <Logo /> */}
             <ForumIcon />
           </IconButton>
           <p>Forum</p>
@@ -266,7 +243,6 @@ const Navbar = (props) => {
       <Link to={"/payment"}>
         <MenuItem>
           <IconButton aria-label="Payment" color="inherit">
-            {/* <Logo /> */}
             <PaymentIcon />
           </IconButton>
           <p>Pay</p>
@@ -276,46 +252,16 @@ const Navbar = (props) => {
       <Link to={"/contact"}>
         <MenuItem>
           <IconButton aria-label="Contact" color="inherit">
-            {/* <Logo /> */}
             <ContactSupportIcon />
           </IconButton>
           <p>Contact</p>
         </MenuItem>
       </Link>
-
-      {/* <Link to={"/home"}>
-          <Avatar alt="Remy Sharp" src={logo} className={classes.large}/>
-          </Link> */}
-      {/* <Link to={"/more"}><MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge
-        //    badgeContent={4}
-           color="secondary">
-            <MoreIcon />
-          </Badge>
-        </IconButton>
-        <p>Features</p>
-      </MenuItem></Link> */}
-
-      {/* <Link to={"/userprofile"}>
-      <MenuItem>
-        <IconButton
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-      </Link> */}
-      {/* {!logIn ? false : ( */}
       {isAuthenticated ? (
         <Link to={"#!"} onClick={onLogout}>
           <MenuItem>
             <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge // badgeContent={4}
+              <Badge
                 color="secondary"
               >
                 <ExitToAppIcon />
@@ -329,7 +275,7 @@ const Navbar = (props) => {
           <Link to={"/login"}>
             <MenuItem>
               <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge // badgeContent={4}
+                <Badge
                   color="secondary"
                 >
                   <ExitToAppIcon />
@@ -341,7 +287,7 @@ const Navbar = (props) => {
           <Link to={"/register"}>
             <MenuItem>
               <IconButton aria-label="show 4 new mails" color="inherit">
-                <Badge // badgeContent={4}
+                <Badge
                   color="secondary"
                 >
                   <ExitToAppIcon />
