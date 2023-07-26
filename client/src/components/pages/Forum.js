@@ -5,11 +5,7 @@ import Modal from "@material-ui/core/Modal";
 import useAxios from "axios-hooks";
 import Axios from "axios";
 import Fade from "@material-ui/core/Fade";
-import {
-  Grid,
-  Typography,
-  Button,
-} from "@material-ui/core";
+import { Grid, Typography, Button } from "@material-ui/core";
 import Backdrop from "@material-ui/core/Backdrop";
 import Card from "../layout/Card2";
 import Paper from "@material-ui/core/Paper";
@@ -48,8 +44,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1),
     width: 200,
   },
-  avatar: {
-  },
+  avatar: {},
   modal: {
     display: "flex",
     alignItems: "center",
@@ -212,16 +207,6 @@ const Forum = (props) => {
       >
         <Fade in={open}>
           <div className={classes.modalPaper}>
-            {/* <Grid
-  container
-  direction="row"
-  justify="center"
-  alignItems="center"
-> */}
-            {/* <div className={classes.root}> */}
-            {/* <div>
-      <div><h2>Add a FAQ</h2></div>
-      <br /> */}
             <div>
               <h2>Add a FAQ</h2>
             </div>
@@ -239,7 +224,6 @@ const Forum = (props) => {
               className={classes.textField}
               value={mysubtitle}
               onChange={(e) => setmysubtitle(e.target.value)}
-              // helperText="Add a link"
             />
             <TextField
               label="Catagory"
@@ -257,45 +241,6 @@ const Forum = (props) => {
               onChange={(e) => setmyrating(e.target.value)}
               helperText="higher the rating will show on top"
             />
-            {/* <TextField
-          label="Subtitle"
-          id="margin-none"
-         
-          className={classes.textField}
-          value={mysubtitle}
-          onChange={(e)=> setmysubtitle(e.target.value)}
-          // helperText="Add a link"
-        /> */}
-            {/* <TextField
-          label="Link"
-          id="margin-none"
-         
-          className={classes.textField}
-          value={mylink}
-          onChange={(e)=> setmylink(e.target.value)}
-          helperText="Add a link"
-        /> */}
-            {/* <TextField
-          label="Link Description"
-          id="margin-none"
-          
-          className={classes.textField}
-          value={mylinkdescription}
-          onChange={(e)=> setmylinkdescription(e.target.value)}
-          helperText="Title your link"
-        /> */}
-            {/* <TextField
-          label="Image"
-          id="margin-none"
-         
-          className={classes.textField}
-          value={myimg}
-          onChange={(e)=> setmyimg(e.target.value)}
-          helperText="https:///yourimagehere.jpg"
-        /> */}
-            {/* </div> */}
-            {/* <div> */}
-
             <TextField
               id="filled-full-width"
               label="Info"
@@ -326,25 +271,14 @@ const Forum = (props) => {
             />
             <Button onClick={addResource}>Save FAQ</Button>
             <Button onClick={handleClose}>exit</Button>
-            {/* </div>
-      <div> */}
-            {/* <div><h2>How it will look</h2></div> */}
-            {/* <Paper className={classes.paper}> */}
             <Card
-              //    dataR.img
-              // className={classes.border}
               title={myheading}
               subtitle={mysubtitle}
               body1={mybody1}
               body2={mybody2}
-              //  link={mylink}
             />
-            {/* </Paper> */}
-            {/* // </div> */}
           </div>
-          {/* // </Grid> */}
         </Fade>
-        {/* )} */}
       </Modal>
     </>
   );
