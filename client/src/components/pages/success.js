@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.dark,
   },
   tabs: {
-    // color: 'pink',
     alignSelf: "center",
     fontFamily: "whitney",
     color: theme.palette.primary.dark,
@@ -43,9 +42,6 @@ const Success = (props) => {
         Thank you for making a payment, please check your email for reciept, the
         charge will appear as CPC Account Payment on your credit card statement.
       </Typography>
-      {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
-  Thank you for making a payment, please check your email for reciept.
-</Typography> */}
     </div>
   );
 };
