@@ -1,56 +1,53 @@
-import About from './About'
-import Locations from './Locations'
-import StaffCard from './Staff'
-import Forms from './Forms'
-import Forum from './Forum'
+import About from "./About";
+import Locations from "./Locations";
+import StaffCard from "./Staff";
+import Forms from "./Forms";
+import Forum from "./Forum";
 // import ContactUs from '../Features/ContactUs'
-import Payment from './Payment'
+import Payment from "./Payment";
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
-import Link from '@material-ui/core/Link';
-import Dbparagraph from '../layout/Dbparagraph'
+import Link from "@material-ui/core/Link";
+import Dbparagraph from "../layout/Dbparagraph";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    color: theme.palette.primary.dark
+    color: theme.palette.primary.dark,
   },
   tabs: {
     // color: 'pink',
-    alignSelf: 'center',
+    alignSelf: "center",
     fontFamily: "whitney",
     color: theme.palette.primary.dark,
-    maxWidth: '100%'
-
+    maxWidth: "100%",
   },
   theming: {
-    color: theme.palette.primary.dark
+    color: theme.palette.primary.dark,
   },
   h1theme: {
     color: theme.palette.secondary.dark,
     paddingLeft: 40,
     margin: 20,
     marginTop: 40,
-    textAlign: 'center',
+    textAlign: "center",
     padding: 10,
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down("md")]: {
       fontSize: 50,
-    }
+    },
   },
   secondaryheader: {
-    textAlign: 'center',
-    
-  }
+    textAlign: "center",
+  },
 }));
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -82,7 +79,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `scrollable-auto-tab-${index}`,
-    'aria-controls': `scrollable-auto-tabpanel-${index}`,
+    "aria-controls": `scrollable-auto-tabpanel-${index}`,
   };
 }
 
@@ -106,7 +103,7 @@ export default function ScrollableTabsButtonAuto() {
     <div className={classes.root}>
       <AppBar position="relative" color="primary">
         <Tabs
-        className={classes.tabs}
+          className={classes.tabs}
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
@@ -125,20 +122,20 @@ export default function ScrollableTabsButtonAuto() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-      <About />
+        <About />
       </TabPanel>
       <TabPanel value={value} index={1}>
-      <StaffCard />
+        <StaffCard />
       </TabPanel>
       <TabPanel value={value} index={2}>
-      <Locations />
+        <Locations />
       </TabPanel>
       <TabPanel value={value} index={3}>
-      <Forms />
+        <Forms />
       </TabPanel>
       <TabPanel value={value} index={4}>
-      <Payment />
-      {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
+        <Payment />
+        {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
   Safely & Securely Make a Payment
 </Typography>
 <Typography variant="h2" component="h2" className={classes.secondaryheader}>
@@ -151,10 +148,10 @@ export default function ScrollableTabsButtonAuto() {
         Click this link to make an invoice for your payment
       </Link>
 </Typography> */}
-<Dbparagraph catagory={"editpayment"}/>
+        <Dbparagraph catagory={"editpayment"} />
       </TabPanel>
       <TabPanel value={value} index={5}>
-      <Forum />
+        <Forum />
       </TabPanel>
       {/* <TabPanel value={value} index={6}>
       <Typography variant="h1" component="h2" className={classes.h1theme}>
