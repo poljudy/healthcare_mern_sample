@@ -93,14 +93,7 @@ const Forum = (props) => {
       "Content-Type": "application/json",
     },
     url: "/api/resources/all",
-    // headers: { Authorization: `JWT ${accessString}` }
   });
-  // function redirectHome () {
-  //   // Redirect to={'/home'}
-  // }
-  // let mydata =  sdata.filter(function (sdata){
-  //     return sdata.display === true;
-  //   })
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -116,92 +109,34 @@ const Forum = (props) => {
     setExpanded(!expanded);
   };
 
-  //   const [editdataRprofile, setblogedit] = useState(false);
-  // const [addResourceState, setaddResourceState] = useState(false)
-  // const openblogform = () =>{
-  //   setblogedit(true)
-  //   handleOpen()
-  // }
   const openModalAdd = () => {
-    // setaddResourceState(true)
     handleOpen();
   };
   useEffect(() => {
     randomtext();
   }, []);
 
-  // function deletefunc(id){
-  //   console.log(id)
-  //   Axios.delete("/api/resources/"+ id)
-  //   .then(res => randomtext())
-  // .catch(err => console.log(err))
-  // };
   const [myheading, setmyheading] = useState("");
   const [mycatagory, setmycatagory] = useState("");
   const [mysubtitle, setmysubtitle] = useState("");
-  // const [myimg, setmyimg] = useState("https://cdn.pixabay.com/photo/2017/04/09/16/40/batman-2216148_1280.jpg");
-  // const [mylink, setmylink] = useState("");
   const [mybody1, setmybody1] = useState("");
   const [mybody2, setmybody2] = useState("");
   const [myrating, setmyrating] = useState("");
-  // const [myauthor, setmyauthor] = useState("");
 
-  // headingM, catM, subtitleM, body1M, body2M, ratingM, linkM
   async function addResource() {
-    //  const message2I = prompt("Ask a question/ or comment & we will get back to you")
     Axios.post("/api/resources", {
-      // author: user.id,
       heading: myheading,
       catagory: mycatagory,
       subtitle: mysubtitle,
       body1: mybody1,
       body2: mybody2,
       rating: myrating,
-      // link: mylink
     })
       .then((res) => console.log(res))
       .then(alert("Saved Resource"))
       .catch((err) => alert(err));
   }
-  // function savelike(id, liked, dataRid){
-  //   console.log(jwtDecode(accessString).dataRname)
-  //   if(dataRid !== jwtDecode(accessString).id){
 
-  //     Axios.put("/api/dataRblog/"+id, {
-  //     liked: liked + 1
-  //     },{headers: { Authorization: `JWT ${accessString}` }} )
-  //     .then(res => randomtext())
-  //     .catch(err => console.log(err));
-  //   }
-  // }
-  // function savedata(){
-  //     // console.log(jwtDecode(accessString))
-  // //    getdataR()
-  //     // run function to retrieve dataR name
-  //   Axios.post("/api/dataRblog", {
-  //     dataRID: jwtDecode(accessString).id,
-  //     author: jwtDecode(accessString).dataRname,
-  //     title: mytitle,
-  //     img: myimg,
-  //     message: mymessage,
-  //     messagetwo: mymessagetwo,
-  //     link: mylink,
-  //     linkdescription: mylinkdescription
-  //   },{headers: { Authorization: `JWT ${accessString}` }} )
-  //   .then(alert("Saved Blog!"))
-  //   .then(res => randomtext())
-  //   // .catch(err => console.log(err));
-  //   .catch(err => alert(err));
-
-  // }
-  // function deletedataR(id){
-  //   console.log(id)
-  //   Axios.delete("/api/forum/"+ id, {headers: { Authorization: `JWT ${accessString}` }})
-  //   .then(res => randomtext())
-  // .catch(err => console.log(err))
-  // };
-
-  // const { clearContacts } = contactContext;
   if (loading && mydata) {
     return (
       <>
@@ -216,27 +151,14 @@ const Forum = (props) => {
   }
   return (
     <>
-      {/* <Grid
-  container
-  direction="row"
-  justify="center"
-  alignItems="center"
->
-       
-        <FlowCard title={"Step 1"} body={"Click to go to cart"}/>
-        <FlowCard title={"Step 2"} body={"Pay through Stripe"}/>
-        <FlowCard title={"Step 3"} body={"Come back soon!"}/>
-</Grid> */}
       {user && (
         <Typography variant="h4" gutterBottom>
           Welcome {user.name}
-          {/* <Button onClick={logout()}>Logout</Button> */}
         </Typography>
       )}
       <Typography variant="h1" component="h2" className={classes.h1theme}>
         Frequently Asked Questions & Important Information
       </Typography>
-      {/* only if role== admin show button */}
       {user && user.role === "admin" && (
         <div>
           <Button onClick={randomtext}>Refresh</Button>
@@ -259,10 +181,7 @@ const Forum = (props) => {
               .map((dataR) => (
                 <Grid item xs={12} m={12} id={dataR._id} key={dataR._id}>
                   <Paper className={classes.paper}>
-                    {/* ))}
-{mydata && mydata.map(dataR => ( */}
                     <Card
-                      //    dataR.img
                       className={classes.border}
                       title={dataR.heading}
                       subtitle={dataR.subtitle}
@@ -272,33 +191,17 @@ const Forum = (props) => {
                       axiosL={"resources"}
                       rating={dataR.rating}
                       catagory={dataR.catagory}
-                      //  editfunc={}
-                      //  deletefunc={this.deletefunc(id)}
                     />
                   </Paper>
                 </Grid>
               ))}
-          {/* <br />
-    <br /> */}
         </Grid>
       </div>
-
-      {/* )} */}
-      {/* {data ? null : (
-      function(){
-
-      setblogedit(false)
-      handleOpen()
-      }
-      
-    )} */}
-      {/* {addResourceState ? true : ( */}
 
       <Modal
         aria-labelledby="server-modal-title"
         aria-describedby="server-modal-description"
         className={classes.modal}
-        //  className={classes.paper}
         open={open}
         onClose={handleClose}
         closeAfterTransition
