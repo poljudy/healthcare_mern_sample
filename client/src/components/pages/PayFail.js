@@ -9,7 +9,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.dark,
   },
   tabs: {
-    // color: 'pink',
     alignSelf: "center",
     fontFamily: "whitney",
     color: theme.palette.primary.dark,
