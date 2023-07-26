@@ -10,7 +10,6 @@ const Home = () => {
 
   useEffect(() => {
     authContext.loadUser();
-    // eslint-disable-next-line
   }, []);
 
   return (

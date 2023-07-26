@@ -1,12 +1,9 @@
 import React from "react";
 import Card from "../layout/Card1";
 import Carousel from "../layout/Carousel";
-// import Maps from "../../components/LocationComp/Maps"
-// import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-// import { lightGreen } from "@material-ui/core/colors";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Dbparagraph from "../layout/Dbparagraph";
@@ -68,43 +65,29 @@ const MyLocations = [
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // background: theme.palette.primary.dark,
-    // height: 400
-    // height: "100%",
     paddingTop: 20,
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
-    // height: '100%',
     background: "white",
     margin: 30,
     [theme.breakpoints.down("md")]: {
       margin: 0,
       padding: 0,
     },
-    // marginTop: 40
   },
   itemtheme: {
-    // height: 400,
-    // margin: 5,
-    // padding: 5
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
     marginRight: 0,
-    // minHeight: 'max-content',
-    // alignItems:"stretch",
     marginLeft: 0,
   },
   cardtheme: {
-    // height: "100%",
     paddingBottom: 15,
-    // height: 470
-    // minHeight: 500
     flexGrow: 1,
-    // paddingTop: 20,
     background: theme.palette.primary.dark,
   },
   h1theme: {
@@ -142,9 +125,7 @@ const Locations = () => {
             className={classes.itemtheme}
           >
             <div className={classes.root}>
-              {/* <Grid container xs={12} md={6} className={classes.itemtheme} direction={"column"}> */}
               <Paper className={classes.paper} elevation={24}>
-                {/* <Grid item xs={12} md={4} className={classes.itemtheme} direction={"column"}></Grid> */}
                 <Card
                   className={classes.cardtheme}
                   title={loc.text}
@@ -154,23 +135,8 @@ const Locations = () => {
                   link2={loc.link2}
                   link3={loc.googlemaps}
                 />
-                {/* </Paper> */}
-                {/* </Grid> */}
-                {/* <Grid item xs={12} md={4} className={classes.itemtheme}>
-          <Paper className={classes.paper} elevation={24}>
-          <Maps lat={loc.lat} lng={loc.lng} text={loc.text}/>
-          </Paper>
-        </Grid> */}
-
-                {/* <Grid item xs={12} md={4} className={classes.itemtheme}> */}
-                {/* <Paper className={classes.paper} elevation={24}> */}
                 <Carousel MyLocation={loc} />
               </Paper>
-              {/* </Grid> */}
-
-              {/* add white line here */}
-              {/* <br />
-      <br /> */}
               <Divider
                 flexItem={true}
                 variant={"fullWidth"}
