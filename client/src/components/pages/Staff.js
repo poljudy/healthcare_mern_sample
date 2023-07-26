@@ -10,29 +10,11 @@ import {
   Grid,
   Typography,
   Button,
-  // ListItemAvatar,
-  // Avatar,
-  // ListItemText,
-  // Link
 } from "@material-ui/core";
 import Dbparagraph from "../layout/Dbparagraph";
 
 import Backdrop from "@material-ui/core/Backdrop";
-// import Paper from '@material-ui/core/Paper';
 import AuthContext from "../../context/auth/authContext";
-// const mWeissman = '../../Images/mWeissman.jpg'
-// const StaffList = [
-//     {
-//         name: "Michael S. Weissman",
-//         _id: 1,
-//         title: "PhD Clinical Director",
-//         specialties: 'Individual Adult Psychotherapy, Family, Marital, Psychological Testing',
-//         education: 'Princeton University, 1970. University of Massachusetts, 1974, PhD Past President, Tidewater Academy of Clinical Psychologists Past President, Virginia Academy of Clinical Psychologists Listed in National Register of  Health Care Providers in Psychology.',
-//         other: 'Past President, Tidewater Academy of Clinical Psychologists Past President, Virginia Academy of Clinical Psychologists Listed in National Register of  Health Care Providers in Psychology. Assistant Professor of Behavioral Science, adjunct faculty, Eastern Virginia Medical School',
-//         hours: 'Churchland and Norfolk offices.',
-//         img: mWeissman
-//     },
-// ]
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,14 +49,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor: lightGreen[500],
     overflow: "scroll",
     maxWidth: "100%",
     backgroundColor: theme.palette.background.paper,
     height: "75%",
     width: "75%",
     alignContent: "center",
-    // color: 'white',
     padding: theme.spacing(3),
     marginTop: 20,
   },
@@ -83,33 +63,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.default,
   },
   cardtheme: {
-    // height: 'auto'
     display: "grid",
-    // justifyContent: 'space-between',
     flexDirection: "column",
     alignItems: "stretch",
   },
 }));
 const Staff = (props) => {
-  // export default function StaffCard() {
   const authContext = useContext(AuthContext);
-  // const contactContext = useContext(ContactContext);
-
   const { isAuthenticated, logout, user } = authContext;
   const [{ data: StaffList, loading }, randomtext] = useAxios({
     headers: {
       "Content-Type": "application/json",
     },
     url: "/api/staff/all",
-    // headers: { Authorization: `JWT ${accessString}` }
   });
   const classes = useStyles();
-  // const [expanded, setExpanded] = React.useState(false);
-
-  // function handleExpandClick () {
-  //   setExpanded(!expanded);
-  // };
-
   const [open, setOpen] = useState(false);
   async function handleOpen() {
     setOpen(true);
@@ -126,12 +94,6 @@ const Staff = (props) => {
     randomtext();
   }, []);
 
-  // function deletefunc(id){
-  //   console.log(id)
-  //   Axios.delete("/api/staff/"+ id)
-  //   .then(res => randomtext())
-  // .catch(err => console.log(err))
-  // };
   const [myName, setmyName] = useState("");
   // const [mycatagory, setmycatagory] = useState("");
   const [myTitle, setmyTitle] = useState("");
