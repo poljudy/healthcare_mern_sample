@@ -95,10 +95,7 @@ const Staff = (props) => {
   }, []);
 
   const [myName, setmyName] = useState("");
-  // const [mycatagory, setmycatagory] = useState("");
   const [myTitle, setmyTitle] = useState("");
-  // const [myimg, setmyimg] = useState("https://cdn.pixabay.com/photo/2017/04/09/16/40/batman-2216148_1280.jpg");
-  // const [mylink, setmylink] = useState("");
   const [myEducation, setmyEducation] = useState("");
   const [mySpecialities, setmySpecialities] = useState("");
   const [myOther, setmyOther] = useState("");
@@ -106,9 +103,7 @@ const Staff = (props) => {
   const [myHours, setmyHours] = useState("");
 
   async function addStaffMember() {
-    //  const message2I = prompt("Ask a question/ or comment & we will get back to you")
     Axios.post("/api/staff", {
-      // author: user.id,
       name: myName,
       title: myTitle,
       education: myEducation,
@@ -182,7 +177,6 @@ const Staff = (props) => {
           aria-labelledby="server-modal-title"
           aria-describedby="server-modal-description"
           className={classes.modal}
-          //  className={classes.paper}
           open={open}
           onClose={handleClose}
           closeAfterTransition
@@ -193,16 +187,6 @@ const Staff = (props) => {
         >
           <Fade in={open}>
             <div className={classes.modalPaper}>
-              {/* <Grid
-  container
-  direction="row"
-  justify="center"
-  alignItems="center"
-> */}
-              {/* <div className={classes.root}> */}
-              {/* <div>
-      <div><h2>Add a FAQ</h2></div>
-      <br /> */}
               <div>
                 <h2>Add a FAQ</h2>
               </div>
@@ -220,7 +204,6 @@ const Staff = (props) => {
                 className={classes.textField}
                 value={myTitle}
                 onChange={(e) => setmyTitle(e.target.value)}
-                // helperText="Add a link"
               />
               <TextField
                 label="Hours"
@@ -289,32 +272,18 @@ const Staff = (props) => {
               />
               <Button onClick={addStaffMember}>Save Staff member</Button>
               <Button onClick={handleClose}>exit</Button>
-              {/* </div>
-      <div> */}
-              {/* <div><h2>How it will look</h2></div> */}
-              {/* <Paper className={classes.paper}> */}
               <Card
-                //    dataR.img
-                // className={classes.border}
                 title={myName}
                 subtitle={myTitle}
                 body1={myEducation}
                 body2={mySpecialities}
-                //  img={myImg}
                 body3={myOther}
                 footer={myHours}
-
-                //  link={mylink}
               />
-              {/* </Paper> */}
-              {/* // </div> */}
             </div>
-            {/* // </Grid> */}
           </Fade>
-          {/* )} */}
         </Modal>
       </>
     );
 };
 export default Staff;
-// need to add id's to resources
