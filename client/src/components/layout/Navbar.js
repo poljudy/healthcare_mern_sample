@@ -8,28 +8,14 @@ import ContactContext from "../../context/contact/contactContext";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-// import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-// import InputBase from "@material-ui/core/InputBase";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
-// import SearchIcon from "@material-ui/icons/Search";
-// import AccountCircle from "@material-ui/icons/AccountCircle";
-// import MailIcon from "@material-ui/icons/Mail";
-// import NotificationsIcon from "@material-ui/icons/Notifications";
-// import MoreIcon from "@material-ui/icons/MoreVert";
 import logo from "../../Images/cpclogo2.png";
 import IconButton from "@material-ui/core/IconButton";
-// import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-// import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-// import MoreIcon from '@material-ui/icons/More';
-// import Divider from '@material-ui/core/Divider';
-// import Card from '@material-ui/core/Card';
-// import CardMedia from '@material-ui/core/CardMedia';
-// import CardContent from '@material-ui/core/CardContent';
 import HomeIcon from "@material-ui/icons/Home";
 import GroupIcon from "@material-ui/icons/Group";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -103,55 +89,32 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   logo: {
-    // width: 355,
-    // height: 150,
-    // marginTop: 5,
-    // marginLeft: 60,
     marginBottom: 0,
     paddingBottom: 0,
     textAlign: "center",
     width: "100%",
     height: "80%",
     objectFit: "contain",
-    // backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
-    // backgroundPosition: '50%',
   },
   logoDiv: {
     alignSelf: "center",
   },
   logoHorizontallyCenter: {
     objectFit: "contain",
-    // alignSelf: 'center'
     margin: 2,
     padding: 2,
-    // marginBottom: 5,
-    // marginBottom: 0,
-    // paddingBottom: 0,
-    // marginRight: 30,
     width: "50%",
     maxWidth: 400,
-    //  position: 'absolute',
     left: "50%",
     top: "50%",
     transform: "translate(-50%, 3%)", // height: 150,
     position: "relative",
-    // left: '37.5%',
-    // [theme.breakpoints.down('md')]: {
-    // left: '10%',
-    //   width: 'auto'
-    // },
-    // [theme.breakpoints.down('sm')]: {
-    //   left: '2%',
-    //   width: 'auto'
-    // }
   },
   iconstyle: {
     color: theme.palette.primary.dark,
   },
 }));
 const Navbar = (props) => {
-  // const Navbar = ({ title, icon }) => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -186,45 +149,6 @@ const Navbar = (props) => {
     clearContacts();
   };
 
-  // const authLinks = (
-  //     <Fragment>
-  //         <li>Hello { user && user.name }</li>
-  //         <li>
-  //             <a href="#!" onClick={onLogout}>
-  //                 <i className="fas fa-sign-out-alt" /> <span className="hide-sm">Logout</span>
-  //             </a>
-  //         </li>
-  //     </Fragment>
-  // );
-
-  // const guestLinks = (
-  //     <Fragment>
-  //         <li>
-  //             <Link to='/register'>Register</Link>
-  //         </li>
-  //         <li>
-  //             <Link to='/login'>Login</Link>
-  //         </li>
-  //     </Fragment>
-  // );
-
-  //     return (
-  //         <div className="navbar bg-primary">
-  //             <h1><i className={icon} /> {title}</h1>
-  //             <ul>{ isAuthenticated ? authLinks : guestLinks }</ul>
-  //         </div>
-  //     );
-  // };
-
-  // Navbar.propTypes = {
-  //     title: PropTypes.string.isRequired,
-  //     icon: PropTypes.string
-  // };
-
-  // Navbar.defaultProps = {
-  //     title: 'Contact Keeper',
-  //     icon: 'fas fa-id-card-alt'
-  // };
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
