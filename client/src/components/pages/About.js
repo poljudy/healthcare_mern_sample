@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 // import CssBaseline from '@material-ui/core/CssBaseline';
 // import Grid from '@material-ui/core/Grid';
 // import {Link} from 'react-router-dom';
@@ -7,12 +7,12 @@ import { makeStyles } from '@material-ui/core/styles';
 // import GitHubIcon from '@material-ui/icons/GitHub';
 // import FacebookIcon from '@material-ui/icons/Facebook';
 // import TwitterIcon from '@material-ui/icons/Twitter';
-import ContactUs from './ContactUs'
+import ContactUs from "./ContactUs";
 // import Header from '../../components/Material-ui/Header';
-import MainFeaturedPost from '../layout/MainFeaturedPost';
-import FeaturedPost from '../layout/FeaturedPost';
-import Dbparagraph from '../layout/Dbparagraph'
-// import Main from '../../components/Material-ui/Main'; 
+import MainFeaturedPost from "../layout/MainFeaturedPost";
+import FeaturedPost from "../layout/FeaturedPost";
+import Dbparagraph from "../layout/Dbparagraph";
+// import Main from '../../components/Material-ui/Main';
 // import Sidebar from '../../components/Material-ui/Sidebar';
 // import Footer from '../../components/Material-ui/Footer';
 // import About from '../../components/Features/Resources'
@@ -20,46 +20,40 @@ import Dbparagraph from '../layout/Dbparagraph'
 // import Typography from '@material-ui/core/Typography';
 // import Link from '@material-ui/core/Link';
 // import MoreTabs from '../../components/AppBar/MoreTabs';
-import MainIMG from '../../Images/oceanHealthcare.jpg'
-import whoweareIMG from '../../Images/mWeissman.jpg'
-import locationsIMG from '../../Images/mainIMG.jpg'
-import {
-  Grid,
-  CssBaseline,
-  Typography,
-  Link
-} from "@material-ui/core";
+import MainIMG from "../../Images/oceanHealthcare.jpg";
+import whoweareIMG from "../../Images/mWeissman.jpg";
+import locationsIMG from "../../Images/mainIMG.jpg";
+import { Grid, CssBaseline, Typography, Link } from "@material-ui/core";
 // import Cookies from 'js-cookie';
 
 // const jwtDecode = require('jwt-decode');
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
   },
-      sidebarAboutBox: {
-        padding: theme.spacing(2),
-        backgroundColor: theme.palette.grey[200],
-      },
-      sidebarSection: {
-        marginTop: theme.spacing(3),
-      },
-      // h1theme: {
-      //   color: theme.palette.secondary.dark,
-      //   paddingLeft: 40,
-      //   margin: 20,
-      //   marginTop: 40,
-      //   textAlign: 'center',
-      //   padding: 10,
-      //   [theme.breakpoints.down('md')]: {
-      //     fontSize: 50,
-      //   }
-      // },
-      // secondaryheader: {
-      //   textAlign: 'center',
-        
-      // }
+  sidebarAboutBox: {
+    padding: theme.spacing(2),
+    backgroundColor: theme.palette.grey[200],
+  },
+  sidebarSection: {
+    marginTop: theme.spacing(3),
+  },
+  // h1theme: {
+  //   color: theme.palette.secondary.dark,
+  //   paddingLeft: 40,
+  //   margin: 20,
+  //   marginTop: 40,
+  //   textAlign: 'center',
+  //   padding: 10,
+  //   [theme.breakpoints.down('md')]: {
+  //     fontSize: 50,
+  //   }
+  // },
+  // secondaryheader: {
+  //   textAlign: 'center',
 
+  // }
 }));
 
 // const sections = [
@@ -76,36 +70,35 @@ const useStyles = makeStyles(theme => ({
 // ];
 
 const mainFeaturedPost = {
-  title: 'Churchland Psychological Center',
-  description:
-    "Counseling Services in Hampton Roads, VA",
-    image: MainIMG,
+  title: "Churchland Psychological Center",
+  description: "Counseling Services in Hampton Roads, VA",
+  image: MainIMG,
   // image: 'https://oceanservice.noaa.gov/facts/ocean-human-health.jpg',
-  imgText: 'Churchland Psychological Center',
-  linkText: 'Our Forms',
+  imgText: "Churchland Psychological Center",
+  linkText: "Our Forms",
 };
 
 const featuredPosts = [
   {
-    title: 'Who We Are',
+    title: "Who We Are",
     // catagory: 'myapplication',
     // date: 'Check',
     description:
-      'Established in 1981, Churchland Psychological Center has been offering the highest quality psychotherapy and counseling services for almost 40 years. Our philosophy is to focus on the special relationship between each patient and his or her therapist, without “interference” by unnecessary administrative procedures. Hence, all appointments are arranged directly with your therapist, and each therapist is directly available to their patients without having to go through our central office. We accept all major insurance carriers, and file insurance claims for each patient.',
+      "Established in 1981, Churchland Psychological Center has been offering the highest quality psychotherapy and counseling services for almost 40 years. Our philosophy is to focus on the special relationship between each patient and his or her therapist, without “interference” by unnecessary administrative procedures. Hence, all appointments are arranged directly with your therapist, and each therapist is directly available to their patients without having to go through our central office. We accept all major insurance carriers, and file insurance claims for each patient.",
     image: whoweareIMG,
-    imageText: 'Image Text',
-    link: '/who'
+    imageText: "Image Text",
+    link: "/who",
   },
   {
-    title: 'Where We Are',
+    title: "Where We Are",
     // catagory: 'application',
     // date: 'Apply Now',
     description:
-      'Churchland Psychological Center offers individual therapy for adults and children, family and marriage counseling, psychological testing and a full range of psychological services in Hampton Roads, VA. Our offices are located in the Churchland section of Chesapeake, Greenbrier, and Norfolk, VA.',
+      "Churchland Psychological Center offers individual therapy for adults and children, family and marriage counseling, psychological testing and a full range of psychological services in Hampton Roads, VA. Our offices are located in the Churchland section of Chesapeake, Greenbrier, and Norfolk, VA.",
     // image: 'https://source.unsplash.com/random',
     image: locationsIMG,
-    imageText: 'Image Text',
-    link: '/where'
+    imageText: "Image Text",
+    link: "/where",
   },
   // {
   //   title: 'Forms',
@@ -139,7 +132,6 @@ const featuredPosts = [
   // }
 ];
 
-
 // const sidebar = {
 //   title: 'Contact Us',
 //   description:
@@ -147,7 +139,7 @@ const featuredPosts = [
 //     // Email Us
 //     number: '(757) 483-3404 (for all offices)',
 //     email: 'cpc3210@yahoo.com',
-    
+
 //     // Other locations',
 //   archives: [
 //     { title: 'About', url: 'about' },
@@ -176,22 +168,22 @@ export default function AboutPage(props) {
 
   return (
     <>
-    {/* <MoreTabs /> */}
-    <React.Fragment>
-      <CssBaseline />
-      {/* <Container maxWidth="lg"> */}
-      <br />
+      {/* <MoreTabs /> */}
+      <React.Fragment>
+        <CssBaseline />
+        {/* <Container maxWidth="lg"> */}
+        <br />
         {/* <Header title="Blog" sections={sections} /> */}
 
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-          
+
           <Grid container spacing={4}>
-            {featuredPosts.map(post => (
-              <FeaturedPost key={post.title} post={post}/>
+            {featuredPosts.map((post) => (
+              <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-          <Dbparagraph catagory={"edithome"}/>
+          <Dbparagraph catagory={"edithome"} />
           {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
   Contact Us
 </Typography>
@@ -207,11 +199,11 @@ export default function AboutPage(props) {
 </Typography> */}
           {/* <ContactUs /> */}
           {/* <Grid container spacing={5} className={classes.mainGrid}> */}
-            {/* <Main title={"Welcome"} tab={"/aboutus"} />  */}
-            {/* {props.selectedDashboard === "about" && <About />} */}
-            {/* {sidebar.archives.map(arch => ( */}
-            {/* <Grid item xs={12} md={4}> */}
-      {/* <Paper elevation={0} className={classes.sidebarAboutBox}>
+          {/* <Main title={"Welcome"} tab={"/aboutus"} />  */}
+          {/* {props.selectedDashboard === "about" && <About />} */}
+          {/* {sidebar.archives.map(arch => ( */}
+          {/* <Grid item xs={12} md={4}> */}
+          {/* <Paper elevation={0} className={classes.sidebarAboutBox}>
         <Typography variant="h6" gutterBottom>
           {sidebar.title}
         </Typography>
@@ -219,7 +211,7 @@ export default function AboutPage(props) {
         <Typography>{sidebar.number}</Typography>
         <Typography>{sidebar.email}</Typography>
       </Paper> */}
-      {/* <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
+          {/* <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Resources
       </Typography>
       {sidebar.archives.map(archive => (
@@ -227,13 +219,13 @@ export default function AboutPage(props) {
           {archive.title}
         </Button>
       ))} */}
-      {/* {sidebar.archives.map(archive => (
+          {/* {sidebar.archives.map(archive => (
         <Link display="block" variant="body1" href={archive.url} key={archive.title}>
           {archive.title}
         </Link>
       ))} */}
-        {/* <Button display="block" key={archive.title} onClick={(e)=> setSelectedDashboard(archive.url)}>{archive.title}</Button> */}
-      {/* <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
+          {/* <Button display="block" key={archive.title} onClick={(e)=> setSelectedDashboard(archive.url)}>{archive.title}</Button> */}
+          {/* <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Social
       </Typography>
       {sidebar.social.map(network => (
@@ -246,9 +238,9 @@ export default function AboutPage(props) {
           </Grid>
         </Link>
       ))} */}
-    {/* </Grid> */}
-    
-            {/* <Sidebar
+          {/* </Grid> */}
+
+          {/* <Sidebar
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.archives}
@@ -256,9 +248,9 @@ export default function AboutPage(props) {
             /> */}
           {/* </Grid> */}
         </main>
-      {/* </Container> */}
-      {/* <Footer title="Footer" description="Something here to give the footer a purpose!" /> */}
-    </React.Fragment>
+        {/* </Container> */}
+        {/* <Footer title="Footer" description="Something here to give the footer a purpose!" /> */}
+      </React.Fragment>
     </>
   );
 }
