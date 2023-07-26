@@ -2,29 +2,18 @@ import React, { useState, useEffect, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Modal from "@material-ui/core/Modal";
-// import { List, ListItem } from "../List";
-// import Axios from "axios";
 import useAxios from "axios-hooks";
 import Axios from "axios";
 import Fade from "@material-ui/core/Fade";
-// import Cookies from 'js-cookie';
 import {
   Grid,
   Typography,
   Button,
-  // ListItemAvatar,
-  // Avatar,
-  // ListItemText,
-  // Link
 } from "@material-ui/core";
 import Backdrop from "@material-ui/core/Backdrop";
-//   import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Card from "../layout/Card2";
-//   import { red, lightGreen } from '@material-ui/core/colors';
 import Paper from "@material-ui/core/Paper";
-// import { Redirect } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
-// import ContactContext from '../../context/contact/contactContext';
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -60,32 +49,20 @@ const useStyles = makeStyles((theme) => ({
     width: 200,
   },
   avatar: {
-    // backgroundColor: lightGreen[500],
   },
   modal: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor: lightGreen[500],
     backgroundColor: theme.palette.background.paper,
-    // height: '75%',
-    // width: '75%',
     alignContent: "center",
-    // color: 'white',
     padding: theme.spacing(3),
     marginTop: 20,
   },
   paper: {
-    // width: 400,
     backgroundColor: theme.palette.primary.main,
-    // border: '2px solid #000',
-    // borderStyle: 'solid',
-    // border: 1,
-    // borderWidth: 'thick',
-    // borderColor : theme.palette.secondary.main,
     boxShadow: theme.shadows[5],
     padding: 2,
-    // padding: theme.spacing(2, 4, 3),
     margin: 15,
   },
   control: {
@@ -105,17 +82,10 @@ const useStyles = makeStyles((theme) => ({
     padding: 2,
     backgroundColor: theme.palette.background.default,
   },
-  // border: {
-  //   borderStyle: 'solid',
-  //   border: 1,
-  //   borderWidth: 'thick',
-  //   borderColor : theme.palette.secondary.main
-  // }
 }));
 
 const Forum = (props) => {
   const authContext = useContext(AuthContext);
-  // const contactContext = useContext(ContactContext);
 
   const { isAuthenticated, logout, user } = authContext;
   const [{ data: mydata, loading }, randomtext] = useAxios({
