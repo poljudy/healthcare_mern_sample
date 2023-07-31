@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from "react";
-// import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import AuthContext from "../../context/auth/authContext";
@@ -300,7 +299,7 @@ const Navbar = (props) => {
       )}
     </Menu>
   );
-  // end mobile
+
   return (
     <div className={classes.grow}>
       <AppBar position="relative" style={{ backgroundColor: "#008292" }}>
@@ -319,28 +318,20 @@ const Navbar = (props) => {
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Typography variant="h6" className={classes.title}>
-              {/* <Link to={"/contact"}>
-              Contact Us
-              </Link> */}
               {user && "Welcome " + user.name}
             </Typography>
 
-            {/* </IconButton> */}
             <IconButton
               edge="end"
               aria-label="Home"
               aria-controls={menuId}
               aria-haspopup="true"
-              //   onClick={handleProfileMenuOpen}
-              // color="secondary"
               className={classes.iconstyle}
             >
               <Link to={"/home"} className={classes.iconstyle}>
                 <HomeIcon />
               </Link>
             </IconButton>
-            {/* <br /> */}
-            {/* copy of menu */}
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
@@ -350,17 +341,6 @@ const Navbar = (props) => {
             >
               <MenuIcon />
             </IconButton>
-            {/* copy of menu */}
-
-            {/* <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge
-            //    badgeContent={4}
-                color="secondary">
-                <Link to={"/signin"}>
-                <ExitToAppIcon />
-                </Link>
-              </Badge>
-            </IconButton> */}
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
