@@ -42,9 +42,7 @@ export default function FeaturedPost(props) {
 
   return (
     <Grid item xs={12} md={6}>
-      {/* <CardActionArea component="a" href={"/userprofile"}> */}
       <Card className={classes.card} elevation={6}>
-        {/* <div className={classes.cardDetails}> */}
         <CardContent className={classes.cardDetails}>
           <Typography
             component="h2"
@@ -60,7 +58,6 @@ export default function FeaturedPost(props) {
             {post.description}
           </Typography>
         </CardContent>
-        {/* </div> */}
         <Hidden xsDown>
           <CardMedia
             className={classes.cardMedia}
@@ -69,8 +66,6 @@ export default function FeaturedPost(props) {
           />
         </Hidden>
       </Card>
-      {/* </CardActionArea> */}
-      {/* </Link> */}
     </Grid>
   );
 }
