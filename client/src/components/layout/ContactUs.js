@@ -14,10 +14,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.dark,
   },
   h1theme: {
-    // color: theme.palette.secondary.dark,
-    // paddingLeft: 40,
-    // margin: 20,
-    // marginTop: 40,
     textAlign: "center",
     padding: 10,
     [theme.breakpoints.down("md")]: {
@@ -29,37 +25,13 @@ const useStyles = makeStyles((theme) => ({
 const sidebar = {
   title: "Contact Us Here",
   description: "3101 American Legion Road, Suite 21B Chesapeake, VA 23321",
-  // Email Us
   number: "(757) 483-3404 (for all offices)",
   email: "office@cpc.hush.com",
 };
 
 const ContactUs = (props) => {
   const classes = useStyles();
-  // const [status, setstatus] = useState("")
 
-  // function submitForm(event) {
-  //       event.preventDefault();
-  //       const form = event.target;
-  //       const data = new FormData(form);
-  //       const xhr = new XMLHttpRequest();
-  //       xhr.open(form.method, form.action);
-  //       xhr.setRequestHeader("Accept", "application/json");
-  //       xhr.onreadystatechange = () => {
-  //           if (xhr.readyState !== XMLHttpRequest.DONE) return;
-  //           if (xhr.status === 200) {
-  //               form.reset();
-  //               setstatus("SUCCESS")
-
-  //           } else {
-  //               setstatus("ERROR")
-  //           }
-  //       };
-  //       xhr.send(data);
-  //   };
-
-  //   render() {
-  // const { status } = state;
   return (
     <>
       {/* <!-- add your custom form HTML here --> */}
