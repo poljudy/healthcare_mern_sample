@@ -13,11 +13,9 @@ import TextField from "@material-ui/core/TextField";
 const useStyles = makeStyles((theme) => ({
   h2theme: {
     color: theme.palette.secondary.dark,
-    // paddingLeft: 40,
     margin: 15,
     marginLeft: "23%",
     marginRight: "23%",
-    // paddingRight: 40,
     textAlign: "center",
     [theme.breakpoints.down("md")]: {
       fontSize: 38,
@@ -39,14 +37,12 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // backgroundColor: lightGreen[500],
     overflow: "scroll",
     maxWidth: "100%",
     backgroundColor: theme.palette.background.paper,
     height: "75%",
     width: "75%",
     alignContent: "center",
-    // color: 'white',
     padding: theme.spacing(3),
     marginTop: 20,
   },
@@ -59,20 +55,15 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1),
     width: 200,
   },
-  // }
 }));
 const Dbparagraph = (props) => {
   const authContext = useContext(AuthContext);
-  // const contactContext = useContext(ContactContext);
-
   const { isAuthenticated, logout, user } = authContext;
-
   const [{ data: DBINFO, loading }, randomtext] = useAxios({
     headers: {
       "Content-Type": "application/json",
     },
     url: "/api/resources/catagory/" + props.catagory,
-    // headers: { Authorization: `JWT ${accessString}` }
   });
   const classes = useStyles();
   const [myHeadingD, setmyHeadingD] = useState("");
@@ -104,13 +95,11 @@ const Dbparagraph = (props) => {
     if (DBINFO.body2) {
       setmybody2D(DBINFO.body2);
     }
-    // setMy
     console.log("clicked modal edit");
     handleOpen();
   }
   async function saveDB() {
     if (mySwitch === "add") {
-      // axios with add
       Axios.post("/api/resources/catagory/:" + props.catagory, {
         // author: user.id,
         heading: myHeadingD,
@@ -118,22 +107,16 @@ const Dbparagraph = (props) => {
         body2: mybody2D,
         catagory: props.catagory,
         display: myFAQS,
-        //  rating: myratingU,
-        // link: mylink
       })
         .then((res) => console.log(res))
         .then(alert("Updated Resource"))
         .catch((err) => alert(err));
     } else if (mySwitch === "edit") {
-      // axios with edit
       Axios.put("/api/resources/catagory/:" + props.catagory, {
-        // author: user.id,
         heading: myHeadingD,
         body1: mybody1D,
         body2: mybody2D,
         display: myFAQS,
-        //  rating: myratingU,
-        // link: mylink
       })
         .then((res) => console.log(res))
         .then(alert("Updated Resource"))
@@ -141,10 +124,8 @@ const Dbparagraph = (props) => {
     }
   }
   function deletefunc(myid) {
-    // event.preventDefault()
     console.log(myid);
     Axios.delete("/api/resources/" + myid)
-      // .then(res => handlebackgroundColor(myid))
       .then((res) => alert("deleting"))
       .catch((err) => console.log(err));
   }
@@ -155,15 +136,9 @@ const Dbparagraph = (props) => {
       setmyFAQs(true);
     }
   }
-  // useEffect(() => {
-  //     randomtext()
-  //   }, [])
   if (loading && !DBINFO) {
     return (
       <>
-        {/* <Typography variant="h1" component="h2" className={classes.h1theme}>
-    Loading
-  </Typography> */}
       </>
     );
   }
