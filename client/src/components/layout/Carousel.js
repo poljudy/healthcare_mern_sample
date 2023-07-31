@@ -11,21 +11,16 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // maxWidth: 400,
-    // minHeight: ,
     flexGrow: 1,
   },
   header: {
     display: "flex",
     alignItems: "center",
-    // height: 50,
     paddingLeft: theme.spacing(4),
     backgroundColor: theme.palette.background.default,
   },
   img: {
-    // height: 255,
     display: "block",
-    // maxWidth: 400,
     overflow: "hidden",
     width: "100%",
   },
@@ -51,11 +46,6 @@ function Carousel(props) {
 
   return (
     <div className={classes.root}>
-      {/* <Paper square elevation={0} className={classes.header}> */}
-      {/* <Typography>{props[activeStep].label}</Typography> */}
-      {/* <Typography>{props.MyLocation.text}</Typography> */}
-
-      {/* </Paper> */}
       <AutoPlaySwipeableViews
         interval={5000}
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
@@ -72,7 +62,6 @@ function Carousel(props) {
                 alt={props.MyLocation.text}
               />
             ) : null}
-            {/* <img className={classes.img} src={step.imgPath} alt={step.label} /> */}
           </div>
         ))}
       </AutoPlaySwipeableViews>
