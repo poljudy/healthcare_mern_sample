@@ -29,7 +29,7 @@ const sidebar = {
   email: "office@cpc.hush.com",
 };
 
-const ContactUs = (props) => {
+const ContactUs = () => {
   const classes = useStyles();
 
   return (
@@ -75,11 +75,6 @@ const ContactUs = (props) => {
           </IconButton>
 
           <Typography variant="h6">{sidebar.description}</Typography>
-          {/* <Typography variant="h6"> 
-        
-        <a href={"tel:" + sidebar.number}>{sidebar.number}</a>
-        
-        </Typography> */}
           <Button
             target="_blank"
             rel="noopener noreferrer"
@@ -98,14 +93,9 @@ const ContactUs = (props) => {
           >
             {sidebar.email}
           </Button>
-          {/* <Typography variant="h6" color="secondary"> 
-        
-        <a href={"mailto:" + sidebar.email}>{sidebar.email}  </a>
-     </Typography> */}
         </Grid>
       </Grid>
     </>
   );
-  //   }
 };
 export default ContactUs;
