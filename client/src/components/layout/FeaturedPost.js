@@ -4,11 +4,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
-// import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Hidden from "@material-ui/core/Hidden";
-// import {Link} from "react-router-dom"
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -16,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardDetails: {
     flex: 1,
-    // textAlign: 'center',
   },
   cardMedia: {
     width: 160,
@@ -25,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     [theme.breakpoints.down("md")]: {
       fontSize: 26,
-      // textAlign: 'justify'
     },
   },
   body: {
@@ -63,11 +59,6 @@ export default function FeaturedPost(props) {
           <Typography variant="body2" paragraph className={classes.bodydesc}>
             {post.description}
           </Typography>
-          {/* <Link to={post.link}>
-              <Typography variant="subtitle1" color="primary">
-                Go Now
-              </Typography>
-              </Link> */}
         </CardContent>
         {/* </div> */}
         <Hidden xsDown>
