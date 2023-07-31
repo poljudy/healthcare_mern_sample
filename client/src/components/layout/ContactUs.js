@@ -34,9 +34,6 @@ const ContactUs = (props) => {
 
   return (
     <>
-      {/* <!-- add your custom form HTML here --> */}
-      {/* <label>Email:</label>
-            <input type="email" name="email" /> */}
       <Grid
         container
         direction="row"
@@ -44,39 +41,8 @@ const ContactUs = (props) => {
         alignItems="center"
         color={theme.palette.secondary.main}
         responsive={"true"}
-        //   className={classes.footerTheme}
       >
-        {/* <form
-            onSubmit={submitForm}
-            action="https://formspree.io/xgenapon"
-            method="POST"
-            color={theme.palette.secondary.main}
-        >
-        <Grid item={2}>
-            <FormControl>
-  <InputLabel htmlFor="Email">Email address</InputLabel>
-  <Input type="email" name="email" id="my-input" aria-describedby="Email to reach out to you" />
-  <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
-</FormControl>
-</Grid>
-<Grid item={4}>
-        <FormControl>
-  <InputLabel htmlFor="Message">Message</InputLabel>
-  <Input type="textarea" name="message" id="textarea" aria-describedby="Message" />
-  <FormHelperText id="my-helper-text">Questions, Comments & Concerns</FormHelperText>
-</FormControl>
-</Grid>
-            {/* <label>Message:</label>
-            <input type="text" name="message" /> */}
-        {/* <Grid item={2}>
-            {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
-            {status === "ERROR" && <p>Ooops! There was an error.</p>}
-            </Grid>
-        </form> */}
         <Grid item={true} id={sidebar._id} style={{ textAlign: "center" }}>
-          {/* <Button target="_blank"
-                rel="noopener noreferrer"
-                href="https://hushforms.com/contactcpc"> */}
           <Typography variant="subtitle2">
             <Link
               underline="always"
@@ -88,9 +54,6 @@ const ContactUs = (props) => {
               {sidebar.title}
             </Link>
           </Typography>
-          {/* </Button> */}
-          {/* SOCIAL MEDIA */}
-
           <IconButton
             aria-label="Facebook"
             target="_blank"
