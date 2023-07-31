@@ -298,17 +298,6 @@ const Navbar = (props) => {
           </Link>
         </div>
       )}
-
-      {/* )} */}
-      {/* {logIn ? false : ( */}
-      {/* <Link to={"/login"}><MenuItem>
-                <IconButton aria-label="show 4 new mails" color="inherit"><Badge// badgeContent={4}
-            color="secondary">
-            <ExitToAppIcon />
-          </Badge></IconButton><p>Log In</p></MenuItem></Link> */}
-      {/* { isAuthenticated ? authLinks : guestLinks } */}
-
-      {/* )} */}
     </Menu>
   );
   // end mobile
@@ -316,109 +305,19 @@ const Navbar = (props) => {
     <div className={classes.grow}>
       <AppBar position="relative" style={{ backgroundColor: "#008292" }}>
         <Toolbar>
-          {/* add if admin then show list of options to do */}
-          {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleProfileMenuOpen}
-            <MenuIcon />
-          >
-          </IconButton> */}
-          {/* end of admin */}
-          {/* <Link to={"/home"}> */}
-          {/* <Card >
-     <CardMedia
-        className={classes.media}
-        src={logo}
-        title="logo"
-      />
-    </Card> */}
-          {/* // </Link> */}
-
           <div
             className={classes.logoHorizontallyCenter}
-            // style={{
-            //       position: 'absolute',
-            //       left: '50%',
-            //       top: '50%',
-            //       transform: 'translate(-50%, -50%)'
-            //   }}
           >
             <Link to={"/home"}>
-              {/* <Avatar variant="square" alt="Churchland Psychological Center" src={logo} className={classes.logo}/> */}
               <img
                 src={logo}
                 alt="Churchland Psychological Center"
                 className={classes.logo}
               ></img>
-              {/* <Typography className={classes.title} variant="h1" noWrap>
-          Churchland Psychological Center
-          </Typography> */}
             </Link>
           </div>
-
-          {/* <Link to={"/home"}>
-<Avatar alt="Remy Sharp" src={logo} className={classes.large}/>
-</Link> */}
-          {/* <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
-          </Typography> */}
-          {/* <div className={classes.search}> */}
-          {/* <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div> */}
-          {/* <InputBase
-              placeholder="Search Any Character"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput
-              }}
-              inputProps={{ "aria-label": "search" }}
-            /> */}
-          {/* <Searchbar /> */}
-          {/* </div> */}
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            {/* <Link to={"/marketplace"}> */}
-            {/* <MenuItem>
-        <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge 
-        //   badgeContent={11} 
-          color="secondary">
-           
-          </Badge>
-        </IconButton>
-        <p>Sign In</p>
-      </MenuItem> */}
-            {/* </Link> */}
-            {/* <IconButton
-              edge="end"
-              aria-label="forms"
-              aria-controls={menuId}
-              aria-haspopup="true"
-            //   onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <Link to={"/forms"}>
-              Forms
-              </Link>
-              </IconButton>
-              <Divider />
-      <IconButton
-              edge="end"
-              aria-label="contact"
-              aria-controls={menuId}
-              aria-haspopup="true"
-            //   onClick={handleProfileMenuOpen}
-              color="inherit"
-            > */}
-
-            {/* <AccountCircle /> */}
-            {/* <Typography variant="h6" className={classes.title}>
-    </Typography> */}
-
             <Typography variant="h6" className={classes.title}>
               {/* <Link to={"/contact"}>
               Contact Us
