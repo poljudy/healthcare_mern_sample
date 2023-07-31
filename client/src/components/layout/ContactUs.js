@@ -1,12 +1,7 @@
-import React, { useState } from "react";
-// import FormControl from '@material-ui/core/FormControl'
-// import InputLabel from '@material-ui/core/InputLabel';
-// import Input from '@material-ui/core/Input';
-// import FormHelperText from '@material-ui/core/FormHelperText';
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import theme from "../theme/Theme";
-// import { CatalogInfoResponseLimits } from "square-connect";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -14,22 +9,9 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import IconButton from "@material-ui/core/IconButton";
 import { Button } from "@material-ui/core";
 
-// FORMSPREE
-
-// export default class MyForm extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.submitForm = this.submitForm.bind(this);
-//     this.state = {
-//       status: ""
-//     };
-//   }
 const useStyles = makeStyles((theme) => ({
   footerTheme: {
     color: theme.palette.primary.dark,
-    // margin: 5,
-    // paddingTop: 8,
-    // fontSize: 36
   },
   h1theme: {
     // color: theme.palette.secondary.dark,
